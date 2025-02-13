@@ -136,6 +136,25 @@ a:hover {
   transform: none;
 }
 
+#typewriter {
+  color: #0072ef;
+  font-weight: bold;
+}
+
+.cursor {
+  color: #0072ef;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+}
+
 section {
   padding-top: 4vh;
   height: 96vh;
