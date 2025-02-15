@@ -181,6 +181,10 @@ section {
   margin: auto 0;
 }
 
+.hero-image {
+  border-radius: 50%;
+}
+
 .section__text {
   align-self: center;
   text-align: center;
@@ -188,6 +192,7 @@ section {
 
 .section__text p {
   font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .section__text__p1 {
