@@ -12,12 +12,6 @@ function setup() {
   strokeWeight(1.8)
 }
 
-// function keyPressed() {
-//   if (key === "s") {
-//     saveGif("mySketch", 5)
-//   }
-// }
-
 function draw() {
   // console.log(frameCount % 360)
   background(10, 15, 40)

@@ -137,12 +137,12 @@ a:hover {
 }
 
 #typewriter {
-  color: #0072ef;
+  color: #aa0201;
   font-weight: bold;
 }
 
 .cursor {
-  color: #0072ef;
+  color: #aa0201;
   animation: blink 1s linear infinite;
 }
 
@@ -219,6 +219,10 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+}
+
+.book-icon {
+  height: 4rem;
 }
 
 .btn-container {
@@ -316,6 +320,11 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+}
+
+.text-container {
+  width: 50%;
+  justify-content: center;
 }
 
 #experience {
