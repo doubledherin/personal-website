@@ -28,12 +28,6 @@ function setup() {
   opacity = 255
 }
 
-function keyPressed() {
-  if (key === "s") {
-    saveGif("noise-flower", 5)
-  }
-}
-
 function draw() {
   stroke(r, g, b, opacity)
 
