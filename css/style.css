@@ -16,9 +16,8 @@
 body {
   font-family: "Raleway", san-serif;
   font-weight: 600;
-  background-color: #460809;
+  background-color: black;
   color: #fefbea;
-  padding: 0 80px;
 }
 
 html {
@@ -42,8 +41,13 @@ nav,
 nav {
   justify-content: space-between;
   align-items: center;
-  height: 17vh;
+  height: 10vh;
   letter-spacing: 1px;
+  top: 0;
+  position: sticky;
+  z-index: 1;
+  background-color: #460809;
+  padding: 0 80px;
 }
 
 .nav-links {
@@ -71,6 +75,10 @@ a:hover {
 
 .logo:hover {
   cursor: default;
+}
+
+.logo a:hover {
+  text-decoration: none;
 }
 
 #hamburger-nav {
@@ -124,7 +132,12 @@ a:hover {
 }
 
 .menu-links.open {
-  max-height: 300px;
+  max-height: max-content;
+  overflow: visible;
+  background-color: #460809;
+  width: 200px;
+  top: 180%;
+  right: -30px;
 }
 
 .hamburger-icon.open span:first-child {
@@ -170,12 +183,17 @@ a:hover {
   }
 }
 
+.sections_container {
+  padding: 0 80px;
+}
+
 section {
   padding-top: 4vh;
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
-  min-height: fit-content;
+  min-height: 100vh;
+  scroll-margin-top: 10vh;
 }
 
 .section-container {
@@ -445,8 +463,7 @@ article .icon {
 }
 
 footer {
-  height: 26vh;
-  margin: 0 1rem;
+  margin: 1rem;
 }
 
 footer p {

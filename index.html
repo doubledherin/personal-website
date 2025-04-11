@@ -7,20 +7,15 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/mediaqueries.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet" />
     <script src="libraries/p5.min.js"></script>
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">Wendy Dherin</div>
+      <div class="logo"><a href="/">Wendy Dherin</a></div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#skill">Skills</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Generative Art</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -44,333 +39,326 @@
         </div>
       </div>
     </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img
-          class="hero-image"
-          src="assets/profile-pic.png"
-          alt="Wendy Dherin profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hey! 👋 I'm</p>
-        <h1 class="title">Wendy Dherin</h1>
-        <p class="section__text__p2">
-          <span id="typewriter"
-            >Full-stack developer. Writer. Musician. Generative artist.</span
-          ><span class="cursor">|</span>
-        </p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('assets/wendydherin.pdf')">
-            Resume
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="assets/linkedin.png"
-            alt="linkedin logo"
-            class="icon"
-            onclick='location.href="https://www.linkedin.com/in/wendydherin/"' />
-          <img
-            src="assets/github.png"
-            alt="github logo"
-            class="icon"
-            onclick='location.href="https://github.com/doubledherin"' />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">A little something</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
+    <div class="sections_container">
+      <section id="profile">
         <div class="section__pic-container">
           <img
-            src="assets/about-pic.png"
-            alt="Wendy Dherin profile picture"
-            class="about-pic" />
+            class="hero-image"
+            src="assets/profile-pic.png"
+            alt="Wendy Dherin profile picture" />
         </div>
-        <div class="about-details-container">
+        <div class="section__text">
+          <p class="section__text__p1">Hey! 👋 I'm</p>
+          <h1 class="title">Wendy Dherin</h1>
+          <p class="section__text__p2">
+            <span id="typewriter"
+              >Full-stack developer. Writer. Musician. Generative artist.</span
+            ><span class="cursor">|</span>
+          </p>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2"
+              onclick="window.open('assets/wendydherin.pdf')">
+              Resume
+            </button>
+            <button
+              class="btn btn-color-1"
+              onclick="location.href='./#contact'">
+              Contact
+            </button>
+          </div>
+          <div id="socials-container">
+            <img
+              src="assets/linkedin.png"
+              alt="linkedin logo"
+              class="icon"
+              onclick='location.href="https://www.linkedin.com/in/wendydherin/"' />
+            <img
+              src="assets/github.png"
+              alt="github logo"
+              class="icon"
+              onclick='location.href="https://github.com/doubledherin"' />
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <p class="section__text__p1">A little something</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img
+              src="assets/about-pic.png"
+              alt="Wendy Dherin profile picture"
+              class="about-pic" />
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="assets/experience.png"
+                  alt="skills icon"
+                  class="icon" />
+                <h3>Experience</h3>
+                <p>10+ years of full-stack development at notable startups</p>
+              </div>
+              <div class="details-container">
+                <img
+                  src="assets/book-icon.svg"
+                  alt="education icon"
+                  class="book-icon" />
+                <h3>Education</h3>
+                <p>Bachelor of Arts in Slavic Languages and Literatures</p>
+                <p>at UC Berkeley, magna cum laude</p>
+              </div>
+            </div>
+            <div class="text-container">
+              <p>
+                I've been coding since 2014, when I graduated from Hackbright
+                Academy. I'm now a senior-level full-stack engineer with
+                management and tech-lead experience.
+              </p>
+              <p>
+                Past employers include SurveyMonkey, Credit Karma, and Reforge.
+                In my spare time, I love making generative art with p5.js. I
+                also enjoy travel, making music, cooking, writing, reading, and
+                working out.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="assets/arrow.png"
+          alt="down arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#skills'" />
+      </section>
+      <section id="skills">
+        <p class="section__text__p1">Check out my</p>
+        <h1 class="title">Skills</h1>
+        <div class="skills-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <img src="assets/experience.png" alt="skills icon" class="icon" />
-              <h3>Experience</h3>
-              <p>10+ years of full-stack development at notable startups</p>
+              <h2 class="skills-subtitle">Frontend Development</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="assets/checkmark.png"
+                    alt="skills icon"
+                    class="icon" />
+                  <div>
+                    <h3>HTML</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="assets/checkmark.png"
+                    alt="skills icon"
+                    class="icon" />
+                  <div>
+                    <h3>CSS</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="assets/checkmark.png"
+                    alt="skills icon"
+                    class="icon" />
+                  <div>
+                    <h3>SASS</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="assets/checkmark.png"
+                    alt="experience icon"
+                    class="icon" />
+                  <div>
+                    <h3>JavaScript</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="assets/checkmark.png"
+                    alt="experience icon"
+                    class="icon" />
+                  <div>
+                    <h3>TypeScript</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="assets/checkmark.png"
+                    alt="experience icon"
+                    class="icon" />
+                  <div>
+                    <h3>React</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+              </div>
             </div>
             <div class="details-container">
-              <img
-                src="assets/book-icon.svg"
-                alt="education icon"
-                class="book-icon" />
-              <h3>Education</h3>
-              <p>Bachelor of Arts in Slavic Languages and Literatures</p>
-              <p>at UC Berkeley, magna cum laude</p>
+              <h2 class="skills-subtitle">Backend Development</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="assets/checkmark.png"
+                    alt="skills icon"
+                    class="icon" />
+                  <div>
+                    <h3>PostgreSQL</h3>
+                    <p>Advanced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="assets/checkmark.png"
+                    alt="skills icon"
+                    class="icon" />
+                  <div>
+                    <h3>Node.js</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="assets/checkmark.png"
+                    alt="skills icon"
+                    class="icon" />
+                  <div>
+                    <h3>Ruby</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="assets/checkmark.png"
+                    alt="skills icon"
+                    class="icon" />
+                  <div>
+                    <h3>Ruby</h3>
+                    <p>Advanced</p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
-          <div class="text-container">
+        </div>
+        <img
+          src="assets/arrow.png"
+          alt="down arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#projects'" />
+      </section>
+      <section id="projects">
+        <p class="section__text__p1">Browse my recent</p>
+        <h1 class="title">Generative Art</h1>
+        <div class="skills-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="assets/istina.gif"
+                  alt="gif of the Istina project -- a rotating golden white globe mandala that oscillates in complexity"
+                  class="project-img" />
+              </div>
+              <h2 class="skills-subtitle project-title">Istina</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('http://github.com/doubledherin/personal-website/blob/main/javascript/sketches/istina.js', '_blank')">
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='istina.html'">
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="assets/noise-flower.png"
+                  alt="Perlin noise flower"
+                  class="project-img" />
+              </div>
+              <h2 class="skills-subtitle project-title">Noise Flower</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/javascript/sketches/noise-flower.js', '_blank')">
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='noise-flower.html'">
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="assets/rippling-spots.gif"
+                  alt="rippling spots image"
+                  class="project-img" />
+              </div>
+              <h2 class="skills-subtitle project-title">Rippling Spots</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/javascript/sketches/rippling-spots.js', '_blank')">
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='rippling-spots.html'">
+                  Live Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="assets/arrow.png"
+          alt="down arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#contact'" />
+      </section>
+      <section id="contact">
+        <p class="section__text__p1">Get in touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="assets/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon" />
             <p>
-              I've been coding since 2014, when I graduated from Hackbright
-              Academy. I'm now a senior-level full-stack engineer with
-              management and tech-lead experience.
+              <a href="mailto:wendydherin@gmail.com">wendydherin@gmail.com</a>
             </p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon" />
             <p>
-              Past employers include SurveyMonkey, Credit Karma, and Reforge. In
-              my spare time, I love making generative art with p5.js. I also
-              enjoy travel, making music, cooking, writing, reading, and working
-              out.
+              <a href="https://www.linkedin.com/in/wendydherin/">LinkedIn</a>
             </p>
           </div>
         </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        alt="down arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#skills'" />
-    </section>
-    <section id="skills">
-      <p class="section__text__p1">Check out my</p>
-      <h1 class="title">Skills</h1>
-      <div class="skills-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="skills-subtitle">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon" />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon" />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon" />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon" />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon" />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon" />
-                <div>
-                  <h3>React</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="skills-subtitle">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon" />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon" />
-                <div>
-                  <h3>Node.js</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon" />
-                <div>
-                  <h3>Ruby</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon" />
-                <div>
-                  <h3>Ruby</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        alt="down arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'" />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse my recent</p>
-      <h1 class="title">Generative Art</h1>
-      <div class="skills-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="assets/istina.gif"
-                alt="gif of the Istina project -- a rotating golden white globe mandala that oscillates in complexity"
-                class="project-img" />
-            </div>
-            <h2 class="skills-subtitle project-title">Istina</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('http://github.com/doubledherin/personal-website/blob/main/javascript/sketches/istina.js', '_blank')">
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='istina.html'">
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="assets/noise-flower.png"
-                alt="Perlin noise flower"
-                class="project-img" />
-            </div>
-            <h2 class="skills-subtitle project-title">Noise Flower</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/javascript/sketches/noise-flower.js', '_blank')">
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='noise-flower.html'">
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="assets/rippling-spots.gif"
-                alt="rippling spots image"
-                class="project-img" />
-            </div>
-            <h2 class="skills-subtitle project-title">Rippling Spots</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/javascript/sketches/rippling-spots.js', '_blank')">
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='rippling-spots.html'">
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        alt="down arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'" />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon" />
-          <p>
-            <a href="mailto:wendydherin@gmail.com">wendydherin@gmail.com</a>
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon" />
-          <p>
-            <a href="https://www.linkedin.com/in/wendydherin/">LinkedIn</a>
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Generative Art</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
       <p>Copyright &#169; 2025 Wendy Dherin. All rights reserved.</p>
-      <p>
-        <a href="https://www.vecteezy.com/free-vector/book-icon"
-          >Book Icon Vectors by Vecteezy</a
-        >
-      </p>
     </footer>
     <script src="javascript/script.js"></script>
     <script src="javascript/typewriter.js"></script>

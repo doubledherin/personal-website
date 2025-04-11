@@ -46,8 +46,11 @@
 }
 
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
+  nav,
+  .sections_container {
+    padding: 0 30px;
+  }
+  #contact {
     height: 40vh;
   }
   #profile {
@@ -56,10 +59,6 @@
   }
   article {
     font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
   }
   .about-containers,
   .contact-info-upper-container,
@@ -105,5 +104,9 @@
 
   .text-container {
     text-align: justify;
+  }
+
+  footer {
+    font-size: small;
   }
 }
