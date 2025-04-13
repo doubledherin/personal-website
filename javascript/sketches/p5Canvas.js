@@ -121,6 +121,11 @@ function draw() {
     grain.show()
   }
   push()
+  noStroke()
+  fill(0, 185)
+  rect(width / 2 - 450, height / 2 - 150, 900, 200, 100, 100, 100, 100)
+  pop()
+  push()
   // noStroke()
   strokeWeight(2)
   stroke(sandColor)
