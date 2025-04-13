@@ -41,7 +41,7 @@ nav,
 nav {
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 65px;
   letter-spacing: 1px;
   top: 0;
   position: sticky;
@@ -201,7 +201,7 @@ section {
 }
 
 #profile {
-  padding: 0;
+  padding-top: 0;
   margin: 0;
   overflow: hidden;
   display: flex;
