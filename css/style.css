@@ -201,6 +201,9 @@ section {
 }
 
 #profile {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   gap: 5rem;

@@ -1,5 +1,5 @@
 let boundingBox, corrois, m, n, sand, sandColor
-let numberOfSandGrains = 10000
+let numberOfSandGrains = 30000
 let fontSize
 let textAlpha = 0 // Initialize alpha value for text transparency
 let textAlpha2 = -100
@@ -121,16 +121,20 @@ function draw() {
     grain.show()
   }
   push()
-  noStroke()
-  fill(252, 229, 174, textAlpha)
+  // noStroke()
+  strokeWeight(2)
+  stroke(sandColor)
+  fill(0)
+  // fill(252, 229, 174, textAlpha)
   textFont(carrois)
   textSize(fontSize)
   text("wendy dherin", nameX, nameY)
   pop()
   push()
   strokeWeight(3)
-  stroke(252, 229, 174, textAlpha2)
-  // fill(252, 229, 174, textAlpha2)
+  stroke("white")
+  // stroke(252, 229, 174, textAlpha2)
+  fill(252, 229, 174, textAlpha2)
 
   textFont(raleway)
   textSize(fontSize / 3)

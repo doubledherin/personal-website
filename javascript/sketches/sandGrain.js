@@ -72,6 +72,6 @@ class SandGrain {
 
   show() {
     stroke(this.sandColor)
-    ellipse(this.currentPosition.x, this.currentPosition.y, 1, 1)
+    ellipse(this.currentPosition.x, this.currentPosition.y, 1.5, 1.5)
   }
 }
