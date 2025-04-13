@@ -8,6 +8,11 @@
   src: url("../fonts/Raleway-VariableFont_wght.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,18 +41,25 @@ a,
 nav,
 .nav-links {
   display: flex;
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  justify-content: flex-end;
 }
 
 nav {
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 65px;
   letter-spacing: 1px;
   top: 0;
   position: sticky;
   z-index: 1;
   background-color: #460809;
   padding: 0 80px;
+  font-family: Quicksand, sans-serif;
+  font-weight: 300;
 }
 
 .nav-links {
@@ -193,15 +205,15 @@ section {
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: 100vh;
-  scroll-margin-top: 10vh;
+  scroll-margin-top: 65px;
 }
 
 .section-container {
   display: flex;
 }
 
-#profile {
-  padding: 0;
+#home {
+  padding-top: 0;
   margin: 0;
   overflow: hidden;
   display: flex;

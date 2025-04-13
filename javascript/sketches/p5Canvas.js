@@ -1,5 +1,5 @@
 let boundingBox, corrois, m, n, sand, sandColor
-let numberOfSandGrains = 30000
+let numberOfSandGrains
 let fontSize
 let textAlpha = 0 // Initialize alpha value for text transparency
 let textAlpha2 = -100
@@ -12,7 +12,8 @@ function preload() {
 
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight)
-  canvas.parent("profile")
+  canvas.parent("home")
+  numberOfSandGrains = max(width, height) * 10
 
   fontSize = width < 600 ? 50 : width / 14
   sandColor = color(252, 229, 174)
@@ -57,7 +58,7 @@ function setNodeCounts() {
 }
 
 function addSand() {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < numberOfSandGrains / 100; i++) {
     sand.push(new SandGrain(sandColor))
   }
 }
@@ -122,8 +123,18 @@ function draw() {
   }
   push()
   noStroke()
-  fill(0, 185)
-  rect(width / 2 - 450, height / 2 - 150, 900, 200, 100, 100, 100, 100)
+  fill(0, 190)
+  const rectWidth = max(nameBoundingBox.w, titleBoundingBox.w)
+  rect(
+    width / 2 - rectWidth / 2,
+    height / 2 - 150,
+    900,
+    200,
+    100,
+    100,
+    100,
+    100
+  )
   pop()
   push()
   // noStroke()

@@ -13,7 +13,6 @@ function setup() {
 }
 
 function draw() {
-  // console.log(frameCount % 360)
   background(10, 15, 40)
   drawingContext.shadowBlur = 50
   drawingContext.shadowColor = color(255, 255, 204)

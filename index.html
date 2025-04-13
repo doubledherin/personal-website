@@ -16,18 +16,15 @@
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo"><a href="/">Wendy Dherin</a></div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Generative Art</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Generative Art</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">Wendy Dherin</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -35,6 +32,7 @@
           <span></span>
         </div>
         <div class="menu-links">
+          <li><a href="#home" onclick="toggleMenu()">Home</a></li>
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li>
             <a href="#experience" onclick="toggleMenu()">Experience</a>
@@ -44,7 +42,7 @@
         </div>
       </div>
     </nav>
-    <section id="profile"></section>
+    <section id="home"></section>
     <div class="sections_container">
       <section id="about">
         <p class="section__text__p1">A little something</p>
@@ -325,8 +323,7 @@
     <footer>
       <p>Copyright &#169; 2025 Wendy Dherin. All rights reserved.</p>
     </footer>
-    <!-- <script src="javascript/script.js"></script> -->
-    <!-- <script src="javascript/typewriter.js"></script> -->
+    <script src="javascript/toggleMenu.js"></script>
     <script src="javascript/sketches/sandGrain.js"></script>
     <script src="javascript/sketches/p5Canvas.js"></script>
   </body>

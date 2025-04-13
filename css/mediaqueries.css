@@ -14,12 +14,13 @@
   }
   #hamburger-nav {
     display: flex;
+    justify-content: flex-end;
   }
   #experience,
   .experience-details-container {
     margin-top: 2rem;
   }
-  #profile,
+  #home,
   .section-container {
     display: block;
   }
@@ -53,7 +54,7 @@
   #contact {
     height: 40vh;
   }
-  #profile {
+  #home {
     height: 83vh;
     margin-bottom: 0;
   }
