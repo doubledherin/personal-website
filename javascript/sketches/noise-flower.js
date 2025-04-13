@@ -44,7 +44,6 @@ function draw() {
     // if noiseFactor is 1, the 'flower' would just be circular
     let x = width / 2 + radius * cos(i) * noiseFactor
     let y = height / 2 + radius * sin(i) * noiseFactor
-    console.log("x", x, "y", y)
     vertex(x, y)
     rotate(PI / rotation)
   }
