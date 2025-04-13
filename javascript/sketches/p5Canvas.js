@@ -12,7 +12,7 @@ function preload() {
 
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight)
-  canvas.parent("profile")
+  canvas.parent("home")
 
   fontSize = width < 600 ? 50 : width / 14
   sandColor = color(252, 229, 174)
