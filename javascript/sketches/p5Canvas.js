@@ -123,7 +123,17 @@ function draw() {
   push()
   noStroke()
   fill(0, 185)
-  rect(width / 2 - 450, height / 2 - 150, 900, 200, 100, 100, 100, 100)
+  const rectWidth = max(nameBoundingBox.w, titleBoundingBox.w)
+  rect(
+    width / 2 - rectWidth / 2,
+    height / 2 - 150,
+    900,
+    200,
+    100,
+    100,
+    100,
+    100
+  )
   pop()
   push()
   // noStroke()
