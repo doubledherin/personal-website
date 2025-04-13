@@ -3,7 +3,7 @@ class SandGrain {
     this.currentPosition = createVector(random(0, width), random(0, height))
     this.velocity = p5.Vector.random2D()
     this.acceleration = createVector()
-    this.maxCurrentVelocity = 30
+    this.maxCurrentVelocity = 5
     this.maxSteeringVelocity = 2
     this.threshold = 0.05
     // this.textPoints = textPoints
