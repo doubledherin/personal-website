@@ -121,21 +121,22 @@ function draw() {
     grain.update()
     grain.show()
   }
-  push()
-  noStroke()
-  fill(0, 190)
-  const rectWidth = max(nameBoundingBox.w, titleBoundingBox.w)
-  rect(
-    width / 2 - rectWidth / 2,
-    height / 2 - 150,
-    900,
-    200,
-    100,
-    100,
-    100,
-    100
-  )
-  pop()
+  // TO DO: Fix rect to be centered and responsive
+  // push()
+  // noStroke()
+  // fill(0, 190)
+  // const rectWidth = max(nameBoundingBox.w, titleBoundingBox.w)
+  // rect(
+  //   width / 2 - rectWidth / 2,
+  //   height / 2 - 150,
+  //   900,
+  //   200,
+  //   100,
+  //   100,
+  //   100,
+  //   100
+  // )
+  // pop()
   push()
   // noStroke()
   strokeWeight(2)
@@ -147,7 +148,8 @@ function draw() {
   text("wendy dherin", nameX, nameY)
   pop()
   push()
-  strokeWeight(3)
+  const sw = width < 600 ? 2 : 3
+  strokeWeight(sw)
   stroke("white")
   // stroke(252, 229, 174, textAlpha2)
   fill(252, 229, 174, textAlpha2)
