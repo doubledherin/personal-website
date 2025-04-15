@@ -16,13 +16,13 @@ function setup() {
   numberOfSandGrains = max(width, height) * 10
 
   fontSize = width < 600 ? 50 : width / 14
-  sandColor = color(252, 229, 174)
+  sandColor = "#e4d6a7" // color(252, 229, 174)
   nameBoundingBox = carrois.textBounds("Wendy Dherin", 0, 0, fontSize)
   titleBoundingBox = raleway.textBounds(
-    "full-stack developer. generative artist.",
+    "f u l l - s t a c k  d e v e l o p e r .  g e n e r a t i v e  a r t i s t .",
     0,
     0,
-    fontSize / 3
+    fontSize / 2.5
   )
   nameX = width / 2 - nameBoundingBox.w / 2
   nameY = height / 2 - nameBoundingBox.h / 2
@@ -136,26 +136,32 @@ function draw() {
   //   100,
   //   100
   // )
-  // pop()
-  push()
-  // noStroke()
-  strokeWeight(2)
-  stroke(sandColor)
-  fill(0)
-  // fill(252, 229, 174, textAlpha)
-  textFont(carrois)
-  textSize(fontSize)
-  text("wendy dherin", nameX, nameY)
-  pop()
-  push()
-  const sw = width < 600 ? 2 : 3
-  strokeWeight(sw)
-  stroke("white")
-  // stroke(252, 229, 174, textAlpha2)
-  fill(252, 229, 174, textAlpha2)
+  // // pop()
+  // push()
+  // // noStroke()
+  // strokeWeight(5)
+  // stroke("#9b2915")
+  // fill("#e4d6a7")
 
-  textFont(raleway)
-  textSize(fontSize / 3)
-  text("full-stack developer. generative artist.", titleX, titleY)
-  pop()
+  // // fill("#e4d6a7")
+  // // fill(252, 229, 174, textAlpha)
+  // textFont(carrois)
+  // textSize(fontSize)
+  // text("wendy dherin", nameX, nameY)
+  // pop()
+  // push()
+  // const sw = width < 600 ? 2 : 3
+  // strokeWeight(sw)
+  // stroke("#50a2a7")
+  // // stroke(252, 229, 174, textAlpha2)
+  // fill("#50a2a7")
+
+  // textFont(raleway)
+  // textSize(fontSize / 2.5)
+  // text(
+  //   "f u l l - s t a c k  d e v e l o p e r .  g e n e r a t i v e  a r t i s t .",
+  //   titleX,
+  //   titleY
+  // )
+  // pop()
 }
