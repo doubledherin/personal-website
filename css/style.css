@@ -16,9 +16,15 @@
   font-family: "Quicksand";
   src: url("../fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "GFSDidot-Regular";
+  src: url("../fonts/GFSDidot-Regular.ttf") format("truetype");
+}
 :root {
   /* black rgb(28 17 10) */
   --black: #1c110a;
+  --black: #000000;
   --sand: #e4d6a7;
   --mustard: #e9b44c;
   --brick: #9b2915;
@@ -70,11 +76,12 @@ nav {
   top: 0;
   position: sticky;
   z-index: 1;
-  background-color: var(--brick);
+  background-color: var(--black);
   padding: 0 80px;
   font-family: Quicksand, sans-serif;
   font-weight: 500;
-  /* border: var(--blue) 4px solid; */
+  border-bottom: var(--sand) 1.5px solid;
+  /* border-bottom: white 1px solid; */
 }
 
 .nav-links {
@@ -85,6 +92,7 @@ nav {
 
 a {
   color: var(--sand);
+  /* color: white; */
   text-decoration: none;
 }
 
@@ -206,51 +214,65 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50% + 65px);
+  background-color: rgb(0, 0, 0, 0.72);
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 5s;
+  padding: 10px 20px 20px;
+  border-radius: 50px;
 }
 
 .name-overlay {
   /* width: max-content; */
-  background-color: rgba(28, 17, 10, 0.72);
-  font-family: Fredericka the Great, Arial, sans-serif;
-  font-size: 84px;
+  /* background-color: rgba(28, 17, 10, 0.72); */
+  font-family: GFSDidot-Regular, Arial, sans-serif;
+  font-size: 103px;
   color: var(--sand);
+  /* color: white; */
   font-weight: 200;
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 2s;
-  border-radius: 50px;
-  margin-top: 65px;
+  animation-duration: 1s;
+  /* margin-top: 65px; */
   /* padding: 0 30px;  */
 }
 
 .roles {
   display: flex;
-  font-size: 32px;
+  font-size: 30px;
   gap: 2rem;
   letter-spacing: 3px;
   font-family: Quicksand;
   font-weight: 600;
 }
 #dev-overlay {
-  background-color: rgba(28, 17, 10, 0.87);
-  color: var(--blue);
-  opacity: 1;
+  /* background-color: rgba(28, 17, 10, 0.87); */
+  color: var(--sand);
+  color: white;
+  opacity: 0;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 3.3s;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 #generative-artist-overlay {
   background-color: rgba(28, 17, 10, 0.87);
-  color: var(--brick);
-  opacity: 1;
+  color: var(--sand);
+  color: white;
+  opacity: 0;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 5s;
+  animation-delay: 4s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 @keyframes fadeInOpacity {
   0% {

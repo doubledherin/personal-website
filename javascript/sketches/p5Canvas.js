@@ -108,6 +108,7 @@ function mouseMoved() {
 
 function draw() {
   background(0)
+  // background(28, 17, 10)
 
   if (textAlpha < 255) {
     textAlpha += fadeSpeed // Increment alpha value
