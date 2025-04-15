@@ -1,33 +1,11 @@
 let boundingBox, corrois, m, n, sand, sandColor
 let numberOfSandGrains
-let fontSize
-let textAlpha = 0 // Initialize alpha value for text transparency
-let textAlpha2 = -100
-let fadeSpeed = 2 // Speed at which the text fades in
-
-function preload() {
-  carrois = loadFont("fonts/CarroisGothicSC-Regular.ttf")
-  raleway = loadFont("fonts/Raleway-VariableFont_wght.ttf")
-}
 
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight)
   canvas.parent("home")
   numberOfSandGrains = max(width, height) * 10
-
-  fontSize = width < 600 ? 50 : width / 14
   sandColor = "#e4d6a7" // color(252, 229, 174)
-  nameBoundingBox = carrois.textBounds("Wendy Dherin", 0, 0, fontSize)
-  titleBoundingBox = raleway.textBounds(
-    "f u l l - s t a c k  d e v e l o p e r .  g e n e r a t i v e  a r t i s t .",
-    0,
-    0,
-    fontSize / 2.5
-  )
-  nameX = width / 2 - nameBoundingBox.w / 2
-  nameY = height / 2 - nameBoundingBox.h / 2
-  titleX = width / 2 - titleBoundingBox.w / 2
-  titleY = nameY + nameBoundingBox.h / 2 + 20
   newVibration()
   cursor(HAND)
   loadPixels()
@@ -97,7 +75,6 @@ function mousePressed() {
   newVibration()
 }
 
-// TO DO: Swipe sand when mouse moves over canvas
 function mouseIsMoving() {
   return mouseX !== pmouseX || mouseY !== pmouseY
 }
@@ -108,12 +85,6 @@ function mouseMoved() {
 
 function draw() {
   background(0)
-  // background(28, 17, 10)
-
-  if (textAlpha < 255) {
-    textAlpha += fadeSpeed // Increment alpha value
-    textAlpha2 += fadeSpeed
-  }
 
   if (mouseIsMoving()) {
     swipeSand()
@@ -122,47 +93,4 @@ function draw() {
     grain.update()
     grain.show()
   }
-  // TO DO: Fix rect to be centered and responsive
-  // push()
-  // noStroke()
-  // fill(0, 190)
-  // const rectWidth = max(nameBoundingBox.w, titleBoundingBox.w)
-  // rect(
-  //   width / 2 - rectWidth / 2,
-  //   height / 2 - 150,
-  //   900,
-  //   200,
-  //   100,
-  //   100,
-  //   100,
-  //   100
-  // )
-  // // pop()
-  // push()
-  // // noStroke()
-  // strokeWeight(5)
-  // stroke("#9b2915")
-  // fill("#e4d6a7")
-
-  // // fill("#e4d6a7")
-  // // fill(252, 229, 174, textAlpha)
-  // textFont(carrois)
-  // textSize(fontSize)
-  // text("wendy dherin", nameX, nameY)
-  // pop()
-  // push()
-  // const sw = width < 600 ? 2 : 3
-  // strokeWeight(sw)
-  // stroke("#50a2a7")
-  // // stroke(252, 229, 174, textAlpha2)
-  // fill("#50a2a7")
-
-  // textFont(raleway)
-  // textSize(fontSize / 2.5)
-  // text(
-  //   "f u l l - s t a c k  d e v e l o p e r .  g e n e r a t i v e  a r t i s t .",
-  //   titleX,
-  //   titleY
-  // )
-  // pop()
 }

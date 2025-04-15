@@ -1,18 +1,4 @@
 @font-face {
-  font-family: "Fredericka the Great";
-  src: url("../fonts/FrederickatheGreat-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Carrois Gothic SC";
-  src: url("../fonts/CarroisGothicSC-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-VariableFont_wght.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "Quicksand";
   src: url("../fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
 }
@@ -22,13 +8,10 @@
   src: url("../fonts/GFSDidot-Regular.ttf") format("truetype");
 }
 :root {
-  /* black rgb(28 17 10) */
-  --black: #1c110a;
   --black: #000000;
   --sand: #e4d6a7;
   --mustard: #e9b44c;
   --brick: #9b2915;
-  /* blue rgb(80 162 167) */
   --blue: #50a2a7;
 }
 * {
@@ -37,7 +20,7 @@
 }
 
 body {
-  font-family: "Raleway", san-serif;
+  font-family: "Quicksand", san-serif;
   font-weight: 600;
   background-color: var(--black);
   color: var(--sand);
