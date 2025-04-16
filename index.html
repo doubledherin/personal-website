@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,44 +10,72 @@
     <script src="libraries/p5.min.js"></script>
     <script>
       if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual"
+        history.scrollRestoration = "manual";
       }
     </script>
   </head>
   <body>
-    <nav id="desktop-nav">
-      <ul class="nav-links">
+    <nav
+      id="desktop-nav"
+      class="border-sand h-nav-h sticky top-0 z-1 hidden w-full items-center justify-between border-b bg-black px-10 py-0 font-medium tracking-widest md:flex"
+    >
+      <ul
+        class="nav-links flex w-full list-none justify-between gap-10 text-xl lg:justify-end lg:text-2xl"
+      >
         <li><a href="#home">home</a></li>
         <li><a href="#about">about</a></li>
-        <li><a href="#experience">experience</a></li>
+        <li><a href="#experience">dev experience</a></li>
         <li><a href="#projects">generative art</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    <nav
+      id="hamburger-nav"
+      class="border-sand h-nav-h flex w-full items-center justify-end border-b-[1.5px] px-[30px] md:hidden"
+    >
+      <div class="hamburger-menu relative inline-block">
+        <div
+          class="hamburger-icon flex h-[24px] w-[30px] cursor-pointer flex-col justify-between"
+          onclick="toggleMenu()"
+        >
+          <span class="bg-sand h-[2px] w-full duration-300 ease-in-out"></span>
+          <span class="bg-sand h-[2px] w-full duration-300 ease-in-out"></span>
+          <span class="bg-sand h-[2px] w-full duration-300 ease-in-out"></span>
         </div>
-        <div class="menu-links">
-          <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li>
-            <a href="#experience" onclick="toggleMenu()">Experience</a>
+        <div
+          class="menu-links absolute top-[100%] right-0 max-h-0 w-fit overflow-hidden text-center text-xl duration-300 ease-in-out"
+        >
+          <li class="h-10"><a href="#home" onclick="toggleMenu()">home</a></li>
+          <li class="h-10">
+            <a href="#about" onclick="toggleMenu()">about</a>
           </li>
-          <li><a href="#projects" onclick="toggleMenu()">Generative Art</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li class="h-10">
+            <a href="#experience" onclick="toggleMenu()">dev experience</a>
+          </li>
+          <li class="h-10">
+            <a href="#projects" onclick="toggleMenu()">generative art</a>
+          </li>
+          <li class="h-10">
+            <a href="#contact" onclick="toggleMenu()">contact</a>
+          </li>
         </div>
       </div>
     </nav>
-    <div id="home">
-      <div id="text-overlay">
-        <div class="name-overlay text-red-900">Wendy Dherin</div>
-        <div class="roles">
-          <div id="dev-overlay">full-stack developer.</div>
-          <div id="generative-artist-overlay">generative artist.</div>
+    <div id="home" class="border-sand border-b">
+      <div
+        id="text-overlay"
+        class="absolute top-2/3 left-1/2 w-[calc(100%-40px)] -translate-x-1/2 -translate-y-2/3 transform py-4 text-center lg:left-1/2 lg:w-fit lg:translate-x-0 lg:text-left"
+      >
+        <div
+          class="name-overlay font-didot text-5xl font-extralight tracking-wide md:text-7xl"
+        >
+          Wendy Dherin
+        </div>
+        <div class="roles flex flex-col text-2xl font-extralight md:text-4xl">
+          <div id="dev-overlay" class="text-white">full-stack developer.</div>
+          <div id="generative-artist-overlay" class="text-white">
+            generative artist.
+          </div>
         </div>
       </div>
     </div>
@@ -60,7 +88,8 @@
             <img
               src="assets/about-pic.png"
               alt="Wendy Dherin profile picture"
-              class="about-pic" />
+              class="about-pic"
+            />
           </div>
           <div class="about-details-container">
             <div class="about-containers">
@@ -68,7 +97,8 @@
                 <img
                   src="assets/experience.png"
                   alt="experience icon"
-                  class="icon" />
+                  class="icon"
+                />
                 <h3>Experience</h3>
                 <p>10+ years of full-stack development at notable startups</p>
               </div>
@@ -76,7 +106,8 @@
                 <img
                   src="assets/book-icon.svg"
                   alt="education icon"
-                  class="book-icon" />
+                  class="book-icon"
+                />
                 <h3>Education</h3>
                 <p>Bachelor of Arts in Slavic Languages and Literatures</p>
                 <p>at UC Berkeley, magna cum laude</p>
@@ -101,7 +132,8 @@
           src="assets/arrow.png"
           alt="down arrow icon"
           class="icon arrow"
-          onclick="location.href='./#experience'" />
+          onclick="location.href='./#experience'"
+        />
       </section>
       <section id="experience">
         <p class="section__text__p1">Check out my</p>
@@ -115,7 +147,8 @@
                   <img
                     src="assets/checkmark.png"
                     alt="experience icon"
-                    class="icon" />
+                    class="icon"
+                  />
                   <div>
                     <h3>HTML</h3>
                     <p>Experienced</p>
@@ -125,7 +158,8 @@
                   <img
                     src="assets/checkmark.png"
                     alt="experience icon"
-                    class="icon" />
+                    class="icon"
+                  />
                   <div>
                     <h3>CSS</h3>
                     <p>Experienced</p>
@@ -135,7 +169,8 @@
                   <img
                     src="assets/checkmark.png"
                     alt="experience icon"
-                    class="icon" />
+                    class="icon"
+                  />
                   <div>
                     <h3>SASS</h3>
                     <p>Experienced</p>
@@ -145,7 +180,8 @@
                   <img
                     src="assets/checkmark.png"
                     alt="experience icon"
-                    class="icon" />
+                    class="icon"
+                  />
                   <div>
                     <h3>JavaScript</h3>
                     <p>Experienced</p>
@@ -155,7 +191,8 @@
                   <img
                     src="assets/checkmark.png"
                     alt="experience icon"
-                    class="icon" />
+                    class="icon"
+                  />
                   <div>
                     <h3>TypeScript</h3>
                     <p>Experienced</p>
@@ -165,7 +202,8 @@
                   <img
                     src="assets/checkmark.png"
                     alt="experience icon"
-                    class="icon" />
+                    class="icon"
+                  />
                   <div>
                     <h3>React</h3>
                     <p>Experienced</p>
@@ -180,7 +218,8 @@
                   <img
                     src="assets/checkmark.png"
                     alt="experience icon"
-                    class="icon" />
+                    class="icon"
+                  />
                   <div>
                     <h3>PostgreSQL</h3>
                     <p>Advanced</p>
@@ -190,7 +229,8 @@
                   <img
                     src="assets/checkmark.png"
                     alt="experience icon"
-                    class="icon" />
+                    class="icon"
+                  />
                   <div>
                     <h3>Node.js</h3>
                     <p>Basic</p>
@@ -200,7 +240,8 @@
                   <img
                     src="assets/checkmark.png"
                     alt="experience icon"
-                    class="icon" />
+                    class="icon"
+                  />
                   <div>
                     <h3>Ruby</h3>
                     <p>Intermediate</p>
@@ -210,7 +251,8 @@
                   <img
                     src="assets/checkmark.png"
                     alt="experience icon"
-                    class="icon" />
+                    class="icon"
+                  />
                   <div>
                     <h3>Ruby</h3>
                     <p>Advanced</p>
@@ -224,7 +266,8 @@
           src="assets/arrow.png"
           alt="down arrow icon"
           class="icon arrow"
-          onclick="location.href='./#projects'" />
+          onclick="location.href='./#projects'"
+        />
       </section>
       <section id="projects">
         <p class="section__text__p1">Browse my recent</p>
@@ -236,18 +279,21 @@
                 <img
                   src="assets/istina.gif"
                   alt="gif of the Istina project -- a rotating golden white globe mandala that oscillates in complexity"
-                  class="project-img" />
+                  class="project-img"
+                />
               </div>
               <h2 class="experience-subtitle project-title">Istina</h2>
               <div class="btn-container">
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="window.open('http://github.com/doubledherin/personal-website/blob/main/javascript/sketches/istina.js', '_blank')">
+                  onclick="window.open('http://github.com/doubledherin/personal-website/blob/main/javascript/sketches/istina.js', '_blank')"
+                >
                   Github
                 </button>
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="location.href='istina.html'">
+                  onclick="location.href='istina.html'"
+                >
                   Live Demo
                 </button>
               </div>
@@ -257,18 +303,21 @@
                 <img
                   src="assets/noise-flower.png"
                   alt="Perlin noise flower"
-                  class="project-img" />
+                  class="project-img"
+                />
               </div>
               <h2 class="experience-subtitle project-title">Noise Flower</h2>
               <div class="btn-container">
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/javascript/sketches/noise-flower.js', '_blank')">
+                  onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/javascript/sketches/noise-flower.js', '_blank')"
+                >
                   Github
                 </button>
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="location.href='noise-flower.html'">
+                  onclick="location.href='noise-flower.html'"
+                >
                   Live Demo
                 </button>
               </div>
@@ -278,18 +327,21 @@
                 <img
                   src="assets/rippling-spots.gif"
                   alt="rippling spots image"
-                  class="project-img" />
+                  class="project-img"
+                />
               </div>
               <h2 class="experience-subtitle project-title">Rippling Spots</h2>
               <div class="btn-container">
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/javascript/sketches/rippling-spots.js', '_blank')">
+                  onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/javascript/sketches/rippling-spots.js', '_blank')"
+                >
                   Github
                 </button>
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="location.href='rippling-spots.html'">
+                  onclick="location.href='rippling-spots.html'"
+                >
                   Live Demo
                 </button>
               </div>
@@ -300,7 +352,8 @@
           src="assets/arrow.png"
           alt="down arrow icon"
           class="icon arrow"
-          onclick="location.href='./#contact'" />
+          onclick="location.href='./#contact'"
+        />
       </section>
       <section id="contact">
         <p class="section__text__p1">Get in touch</p>
@@ -310,13 +363,15 @@
             <img
               src="assets/email.png"
               alt="Email icon"
-              class="icon contact-icon email-icon" />
+              class="icon contact-icon email-icon"
+            />
           </div>
           <div class="contact-info-container">
             <img
               src="assets/linkedin.png"
               alt="LinkedIn icon"
-              class="icon contact-icon" />
+              class="icon contact-icon"
+            />
             <p>
               <a href="https://www.linkedin.com/in/wendydherin/">LinkedIn</a>
             </p>

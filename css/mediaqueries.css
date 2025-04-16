@@ -9,18 +9,18 @@
 }
 
 @media screen and (max-width: 1200px) {
-  #desktop-nav {
+  /* #desktop-nav {
     display: none;
   }
   #hamburger-nav {
     display: flex;
     justify-content: flex-end;
-  }
+  } */
   #experience,
   .experience-details-container {
     margin-top: 2rem;
   }
-  #home,
+  /* #home, */
   .section-container {
     display: block;
   }
@@ -54,10 +54,10 @@
   #contact {
     height: 40vh;
   }
-  #home {
+  /* #home {
     height: 83vh;
     margin-bottom: 0;
-  }
+  } */
   article {
     font-size: 1rem;
   }
@@ -79,9 +79,9 @@
   .experience-subtitle {
     font-size: 1.25rem;
   }
-  .logo {
+  /* .logo {
     font-size: 1.5rem;
-  }
+  } */
 
   .nav-links {
     flex-direction: column;
