@@ -5,5 +5,8 @@ export default {
     "./javascript/**/*.js",
     "./css/**/*.css",
   ],
+  theme: {
+    extend: {},
+  },
   plugins: [],
-}
+};

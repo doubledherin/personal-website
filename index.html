@@ -17,7 +17,7 @@
   <body>
     <nav
       id="desktop-nav"
-      class="border-sand sticky top-0 z-1 hidden h-14 w-full items-center justify-between border-b bg-black px-10 py-0 font-medium tracking-widest md:flex"
+      class="border-sand h-nav-h sticky top-0 z-1 hidden w-full items-center justify-between border-b bg-black px-10 py-0 font-medium tracking-widest md:flex"
     >
       <ul
         class="nav-links flex w-full list-none justify-between gap-10 text-xl lg:justify-end lg:text-2xl"
@@ -31,7 +31,7 @@
     </nav>
     <nav
       id="hamburger-nav"
-      class="border-sand flex h-[65px] w-full items-center justify-end border-b-[1.5px] px-[30px] md:hidden"
+      class="border-sand h-nav-h flex w-full items-center justify-end border-b-[1.5px] px-[30px] md:hidden"
     >
       <div class="hamburger-menu relative inline-block">
         <div
@@ -61,12 +61,21 @@
         </div>
       </div>
     </nav>
-    <div id="home">
-      <div id="text-overlay">
-        <div class="name-overlay text-red-900">Wendy Dherin</div>
-        <div class="roles">
-          <div id="dev-overlay">full-stack developer.</div>
-          <div id="generative-artist-overlay">generative artist.</div>
+    <div id="home" class="border-sand border-b">
+      <div
+        id="text-overlay"
+        class="absolute top-2/3 left-1/2 w-[calc(100%-40px)] -translate-x-1/2 -translate-y-2/3 transform py-4 text-center lg:left-1/2 lg:w-fit lg:translate-x-0 lg:text-left"
+      >
+        <div
+          class="name-overlay font-didot text-5xl font-extralight tracking-wide md:text-7xl"
+        >
+          Wendy Dherin
+        </div>
+        <div class="roles flex flex-col text-2xl font-extralight md:text-4xl">
+          <div id="dev-overlay" class="text-white">full-stack developer.</div>
+          <div id="generative-artist-overlay" class="text-white">
+            generative artist.
+          </div>
         </div>
       </div>
     </div>

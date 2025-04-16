@@ -20,7 +20,7 @@
   .experience-details-container {
     margin-top: 2rem;
   }
-  #home,
+  /* #home, */
   .section-container {
     display: block;
   }
@@ -54,10 +54,10 @@
   #contact {
     height: 40vh;
   }
-  #home {
+  /* #home {
     height: 83vh;
     margin-bottom: 0;
-  }
+  } */
   article {
     font-size: 1rem;
   }

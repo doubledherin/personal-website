@@ -3,15 +3,9 @@
 :root {
   --sand: #e4d6a7;
   --mustard: #e9b44c;
-  --brick: #9b2915;
+  --bricka: #9b2915;
   --bermuda: #50a2a7;
-}
-
-@theme {
-  --color-sand: var(--sand);
-  --color-bermuda: var(--bermuda);
-  --color-brick: var(--brick);
-  --color-mustard: var(--mustard);
+  --nav-height: 65px;
 }
 
 @font-face {
@@ -22,6 +16,28 @@
 @font-face {
   font-family: "GFSDidot-Regular";
   src: url("../fonts/GFSDidot-Regular.ttf") format("truetype");
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@theme {
+  --color-sand: var(--sand);
+  --color-bermuda: var(--bermuda);
+  --color-brick: var(--bricka);
+  --color-mustard: var(--mustard);
+  --height-nav-h: var(--nav-height);
+  --font-didot: "GFSDidot", "serif";
+  --font-quicksand: "Quicksand", "sans-serif";
+
+  --fade-in-animation: fadeInOpacity var(--animation-duration, 1s)
+    var(--animation-delay, 0s) ease-in-out forwards;
 }
 
 body {
@@ -80,73 +96,22 @@ a,
   transform: none;
 }
 
-@keyframes blink {
-  0% {
-    opacity: 100%;
-  }
-  50% {
-    opacity: 0%;
-  }
-}
-*/
-
 /* homepage */
 #home {
-  padding-top: 0;
-  margin: 0;
-  height: 96vh;
   scroll-margin-top: 65px;
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  height: 80vh;
-}
-
-#text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50% + 65px);
-  background-color: rgb(0, 0, 0, 0.72);
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 5s;
-  padding: 10px 20px 20px;
-  border-radius: 50px;
 }
 
 .name-overlay {
-  width: max-content;
-  background-color: rgba(28, 17, 10, 0.72);
-  font-family: GFSDidot-Regular, Arial, sans-serif;
-  font-size: 103px;
-  color: var(--sand);
-  color: white;
-  font-weight: 200;
+  background-color: rgba(0, 0, 0, 0.72);
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 1s;
-  margin-top: 65px;
-  padding: 0 30px;
 }
 
-.roles {
-  display: flex;
-  font-size: 30px;
-  gap: 2rem;
-  letter-spacing: 3px;
-  font-family: Quicksand;
-  font-weight: 600;
-}
 #dev-overlay {
-  background-color: rgba(28, 17, 10, 0.87);
-  color: var(--sand);
+  background-color: rgba(0, 0, 0, 0.87);
   color: white;
   opacity: 0;
   animation-name: fadeInOpacity;
@@ -158,9 +123,7 @@ a,
 }
 
 #generative-artist-overlay {
-  background-color: rgba(28, 17, 10, 0.87);
-  color: var(--sand);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.87);
   opacity: 0;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
@@ -176,10 +139,6 @@ a,
   100% {
     opacity: 1;
   }
-}
-.identities-overlay {
-  display: flex;
-  gap: 2;
 }
 
 /* SECTIONS */
@@ -268,7 +227,6 @@ section {
 .btn-color-1,
 .btn-color-2 {
   border: rgb(53, 53, 53) 0.1rem solid;
-  background-color: var(--);
   color: var(--sand);
 }
 
