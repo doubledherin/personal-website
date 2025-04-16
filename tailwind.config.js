@@ -1,7 +1,9 @@
 export default {
-  content: ["./index.html", "./javascript/**/*.js", "./css/**/*.css"],
-  theme: {
-    extend: {},
-  },
+  content: [
+    "./index.html",
+    "./../*.html",
+    "./javascript/**/*.js",
+    "./css/**/*.css",
+  ],
   plugins: [],
 }
