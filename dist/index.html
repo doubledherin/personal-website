@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wendy Dherin</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-B4NoWz6T.ico" />
+    <script src="/libraries/p5.min.js"></script>
+    <script>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+    </script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DRqB32sZ.css">
+  </head>
+  <body>
+    <nav
+      id="desktop-nav"
+      class="border-sand h-nav-h sticky top-0 z-1 hidden w-full items-center justify-between border-b bg-black px-10 py-0 font-medium tracking-widest md:flex"
+    >
+      <ul
+        class="nav-links flex w-full list-none justify-between gap-10 text-xl lg:justify-end lg:text-2xl"
+      >
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#experience">dev experience</a></li>
+        <li><a href="#projects">generative art</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+    <nav
+      id="hamburger-nav"
+      class="border-sand h-nav-h flex w-full items-center justify-end border-b-[1.5px] px-[30px] md:hidden"
+    >
+      <div class="hamburger-menu relative inline-block">
+        <div
+          class="hamburger-icon flex h-[24px] w-[30px] cursor-pointer flex-col justify-between"
+          onclick="toggleMenu()"
+        >
+          <span class="bg-sand h-[2px] w-full duration-300 ease-in-out"></span>
+          <span class="bg-sand h-[2px] w-full duration-300 ease-in-out"></span>
+          <span class="bg-sand h-[2px] w-full duration-300 ease-in-out"></span>
+        </div>
+        <div
+          class="menu-links absolute top-[100%] right-0 max-h-0 w-fit overflow-hidden text-center text-xl duration-300 ease-in-out"
+        >
+          <li class="h-10"><a href="#home" onclick="toggleMenu()">home</a></li>
+          <li class="h-10">
+            <a href="#about" onclick="toggleMenu()">about</a>
+          </li>
+          <li class="h-10">
+            <a href="#experience" onclick="toggleMenu()">dev experience</a>
+          </li>
+          <li class="h-10">
+            <a href="#projects" onclick="toggleMenu()">generative art</a>
+          </li>
+          <li class="h-10">
+            <a href="#contact" onclick="toggleMenu()">contact</a>
+          </li>
+        </div>
+      </div>
+    </nav>
+    <div id="home" class="border-sand border-b">
+      <div
+        id="text-overlay"
+        class="absolute top-2/3 left-1/2 w-[calc(100%-40px)] -translate-x-1/2 -translate-y-2/3 transform py-4 text-center lg:left-1/2 lg:w-fit lg:translate-x-0 lg:text-left"
+      >
+        <div
+          class="name-overlay font-didot text-5xl font-extralight tracking-wide md:text-7xl"
+        >
+          Wendy Dherin
+        </div>
+        <div class="roles flex flex-col text-2xl font-extralight md:text-4xl">
+          <div id="dev-overlay" class="text-white">full-stack developer.</div>
+          <div id="generative-artist-overlay" class="text-white">
+            generative artist.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sections_container">
+      <section id="about">
+        <p class="section__text__p1">A little something</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img
+              src="/assets/about-pic-ryEvjYYr.png"
+              alt="Wendy Dherin profile picture"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="/assets/experience-BqkST29l.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <h3>Experience</h3>
+                <p>10+ years of full-stack development at notable startups</p>
+              </div>
+              <div class="details-container">
+                <img
+                  src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='2638'%20height='2638'%20viewBox='0%200%202638%202638'%3e%3cpath%20fill-rule='evenodd'%20fill='rgb(100%25,%20100%25,%20100%25)'%20fill-opacity='1'%20d='M%200.152344%200.148438%20L%202637.851562%200.148438%20L%202637.851562%202637.847656%20L%200.152344%202637.847656%20L%200.152344%200.148438%20'/%3e%3cpath%20fill-rule='evenodd'%20fill='rgb(0%25,%200%25,%200%25)'%20fill-opacity='1'%20d='M%201342.019531%20979.738281%20L%201342.019531%201803.648438%20C%201470.449219%201701.875%201637.660156%201646.140625%201819.410156%201646.140625%20C%201863.019531%201646.140625%201901.789062%201648.5625%201942.988281%201655.832031%20L%201942.988281%20812.539062%20C%201904.21875%20805.269531%201865.441406%20805.269531%201819.410156%20805.269531%20C%201632.808594%20807.691406%201458.339844%20870.699219%201342.019531%20979.738281%20Z%20M%201819.410156%201697.023438%20C%201654.621094%201697.03125%201501.949219%201745.492188%201383.210938%201832.730469%20L%202069%201832.730469%20L%202069%201013.671875%20L%201991.460938%201013.671875%20L%201991.460938%201687.335938%20C%201991.460938%201694.605469%201989.03125%201701.875%201981.761719%201706.726562%20C%201976.910156%201711.566406%201969.648438%201713.992188%201962.371094%201711.566406%20C%201916.328125%201701.875%201870.289062%201697.023438%201819.410156%201697.023438%20Z%20M%201249.941406%201832.730469%20C%201136.039062%201745.492188%20978.535156%201697.03125%20818.601562%201697.03125%20C%20767.707031%201697.03125%20721.671875%201701.875%20675.628906%201711.566406%20C%20668.355469%201713.992188%20661.085938%201711.566406%20656.242188%201706.726562%20C%20651.394531%201701.875%20646.550781%201694.605469%20646.550781%201687.339844%20L%20646.550781%201013.679688%20L%20569%201013.671875%20L%20569%201832.730469%20Z%20M%201293.558594%201803.652344%20L%201293.558594%20979.75%20C%201179.660156%20870.699219%201010.03125%20807.699219%20821.019531%20807.699219%20C%20774.976562%20807.699219%20736.207031%20807.699219%20697.4375%20814.96875%20L%20697.4375%201658.261719%20C%20736.207031%201650.988281%20777.402344%201648.5625%20821.019531%201648.5625%20C%201000.339844%201648.5625%201169.96875%201704.300781%201293.558594%201803.652344%20'/%3e%3c/svg%3e"
+                  alt="education icon"
+                  class="book-icon"
+                />
+                <h3>Education</h3>
+                <p>Bachelor of Arts in Slavic Languages and Literatures</p>
+                <p>at UC Berkeley, magna cum laude</p>
+              </div>
+            </div>
+            <div class="text-container">
+              <p>
+                I've been coding since 2014, when I graduated from Hackbright
+                Academy. I'm now a senior-level full-stack engineer with
+                management and tech-lead experience.
+              </p>
+              <p>
+                Past employers include SurveyMonkey, Credit Karma, and Reforge.
+                In my spare time, I love making generative art with p5.js. I
+                also enjoy travel, making music, cooking, writing, reading, and
+                working out.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="/assets/arrow-7eo1ZZ-E.png"
+          alt="down arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#experience'"
+        />
+      </section>
+      <section id="experience">
+        <p class="section__text__p1">Check out my</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-subtitle">Frontend Development</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="/assets/checkmark-Dvf0FkXU.png"
+                    alt="experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>HTML</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark-Dvf0FkXU.png"
+                    alt="experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>CSS</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark-Dvf0FkXU.png"
+                    alt="experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>SASS</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark-Dvf0FkXU.png"
+                    alt="experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>JavaScript</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark-Dvf0FkXU.png"
+                    alt="experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>TypeScript</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark-Dvf0FkXU.png"
+                    alt="experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>React</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="details-container">
+              <h2 class="experience-subtitle">Backend Development</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="/assets/checkmark-Dvf0FkXU.png"
+                    alt="experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>PostgreSQL</h3>
+                    <p>Advanced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark-Dvf0FkXU.png"
+                    alt="experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Node.js</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark-Dvf0FkXU.png"
+                    alt="experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Ruby</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="/assets/checkmark-Dvf0FkXU.png"
+                    alt="experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Ruby</h3>
+                    <p>Advanced</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="/assets/arrow-7eo1ZZ-E.png"
+          alt="down arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#projects'"
+        />
+      </section>
+      <section id="projects">
+        <p class="section__text__p1">Browse my recent</p>
+        <h1 class="title">Generative Art</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="/assets/istina-8TaGgQ1K.gif"
+                  alt="gif of the Istina project -- a rotating golden white globe mandala that oscillates in complexity"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-subtitle project-title">Istina</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('http://github.com/doubledherin/personal-website/blob/main/./javascript/sketches/istina.js', '_blank')"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='istina.html'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="/assets/noise-flower-B-Kz5SCY.png"
+                  alt="Perlin noise flower"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-subtitle project-title">Noise Flower</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/./javascript/sketches/noise-flower.js', '_blank')"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='noise-flower.html'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="/assets/rippling-spots-BGzYTO6W.gif"
+                  alt="rippling spots image"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-subtitle project-title">Rippling Spots</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/./javascript/sketches/rippling-spots.js', '_blank')"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='rippling-spots.html'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="/assets/arrow-7eo1ZZ-E.png"
+          alt="down arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#contact'"
+        />
+      </section>
+      <section id="contact">
+        <p class="section__text__p1">Get in touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="/assets/email-Dfc7gETu.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="/assets/linkedin-BePj2NMB.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+            />
+            <p>
+              <a href="https://www.linkedin.com/in/wendydherin/">LinkedIn</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>Copyright &#169; 2025 Wendy Dherin. All rights reserved.</p>
+    </footer>
+    <script src="/javascript/toggleMenu.js"></script>
+    <script src="/javascript/sketches/sandGrain.js"></script>
+    <script src="/javascript/sketches/p5Canvas.js"></script>
+  </body>
+</html>
