@@ -51,7 +51,7 @@ a,
   overflow: visible;
   background-color: black;
   width: 200px;
-  top: 180%;
+  top: 200%;
   right: -30px;
   list-style: none;
 }
@@ -79,7 +79,7 @@ a,
 .hamburger-icon span:last-child {
   transform: none;
 }
-/* 
+
 @keyframes blink {
   0% {
     opacity: 100%;
@@ -87,7 +87,8 @@ a,
   50% {
     opacity: 0%;
   }
-} */
+}
+*/
 
 /* homepage */
 #home {
@@ -119,20 +120,20 @@ a,
 }
 
 .name-overlay {
-  /* width: max-content; */
-  /* background-color: rgba(28, 17, 10, 0.72); */
+  width: max-content;
+  background-color: rgba(28, 17, 10, 0.72);
   font-family: GFSDidot-Regular, Arial, sans-serif;
   font-size: 103px;
   color: var(--sand);
-  /* color: white; */
+  color: white;
   font-weight: 200;
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 1s;
-  /* margin-top: 65px; */
-  /* padding: 0 30px;  */
+  margin-top: 65px;
+  padding: 0 30px;
 }
 
 .roles {
@@ -144,7 +145,7 @@ a,
   font-weight: 600;
 }
 #dev-overlay {
-  /* background-color: rgba(28, 17, 10, 0.87); */
+  background-color: rgba(28, 17, 10, 0.87);
   color: var(--sand);
   color: white;
   opacity: 0;
