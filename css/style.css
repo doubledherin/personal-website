@@ -103,15 +103,6 @@ a,
   transform: none;
 }
 
-.name-overlay {
-  background-color: rgba(0, 0, 0, 0.72);
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
-}
-
 #dev-overlay {
   background-color: rgba(0, 0, 0, 0.87);
   color: white;
@@ -141,11 +132,6 @@ a,
   100% {
     opacity: 1;
   }
-}
-
-.section__text {
-  align-self: center;
-  text-align: center;
 }
 
 .section__text__p2 {
