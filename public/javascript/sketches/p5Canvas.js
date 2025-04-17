@@ -5,8 +5,10 @@ let navHeight = 65;
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight - navHeight);
   canvas.parent("home");
+  canvas.touchStarted(newVibration);
+  canvas.mousePressed(newVibration);
   numberOfSandGrains = max(width, height) * 10;
-  sandColor = "#e4d6a7"; // color(252, 229, 174)
+  sandColor = "#e4d6a7";
   newVibration();
   cursor(HAND);
   loadPixels();
@@ -66,14 +68,6 @@ function swipeSand() {
       grain.velocity.add(swipeForce);
     }
   }
-}
-
-function touchStarted() {
-  newVibration();
-}
-
-function mousePressed() {
-  newVibration();
 }
 
 function mouseIsMoving() {
