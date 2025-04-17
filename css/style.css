@@ -260,10 +260,6 @@ article .icon {
   cursor: default;
 }
 
-#projects {
-  position: relative;
-}
-
 .color-container {
   border-color: black;
   background: var(--brick);

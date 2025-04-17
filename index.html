@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/mediaqueries.css" />
-    <script src="libraries/p5.min.js"></script>
+    <script src="/libraries/p5.min.js"></script>
     <script>
       if ("scrollRestoration" in history) {
         history.scrollRestoration = "manual";
@@ -25,7 +25,7 @@
         <li><a href="#home">home</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#dev-experience">dev experience</a></li>
-        <li><a href="#projects">generative art</a></li>
+        <li><a href="#generative-art">generative art</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
@@ -53,7 +53,7 @@
             <a href="#dev-experience" onclick="toggleMenu()">dev experience</a>
           </li>
           <li class="h-10">
-            <a href="#projects" onclick="toggleMenu()">generative art</a>
+            <a href="#generative-art" onclick="toggleMenu()">generative art</a>
           </li>
           <li class="h-10">
             <a href="#contact" onclick="toggleMenu()">contact</a>
@@ -79,7 +79,7 @@
         </div>
       </div>
     </div>
-    <div class="px-6 md:px-10 lg:px-14">
+    <div id="section_container" class="px-6 md:px-10 lg:px-14">
       <section
         id="about"
         class="flex min-h-[calc(100vh-65px)] scroll-mt-[65px] flex-col justify-center pt-0"
@@ -147,7 +147,7 @@
           reliability, and empathy.</p>
         </p>
       </section>
-      <section id="projects" class="scroll-mt-[65px]">
+      <section id="generative-art" class="scroll-mt-[65px]">
         <p class="text-md pb-2 text-center">Browse my recent</p>
         <div class="pb-7 text-center text-4xl">Generative Art</div>
         <div class="experience-details-container">
@@ -261,8 +261,8 @@
     <footer>
       <p>Copyright &#169; 2025 Wendy Dherin. All rights reserved.</p>
     </footer>
-    <script src="javascript/toggleMenu.js"></script>
-    <script src="javascript/sketches/sandGrain.js"></script>
-    <script src="javascript/sketches/p5Canvas.js"></script>
+    <script src="/javascript/toggleMenu.js"></script>
+    <script src="/javascript/sketches/sandGrain.js"></script>
+    <script src="/javascript/sketches/p5Canvas.js"></script>
   </body>
 </html>
