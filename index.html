@@ -56,19 +56,25 @@
         </div>
       </div>
     </nav>
-    <div id="home" class="border-sand border-b min-h-[calc(100vh-65px)] ">
+    <div id="home" class="border-sand min-h-[calc(100vh-65px)] border-b">
       <div
         id="text-overlay"
-        class="absolute top-2/3 left-1/2 w-[calc(100%-40px)] -translate-x-1/2 -translate-y-2/3 transform py-4 text-center lg:left-1/2 lg:w-fit lg:translate-x-0 lg:text-left"
+        class="absolute top-2/3 left-1/2 w-[calc(100%-40px)] -translate-x-1/2 -translate-y-2/3 transform py-4 lg:left-1/2 lg:w-fit lg:translate-x-0 lg:text-left"
       >
-        <div id="name-overlay"
-          class="font-didot text-5xl font-extralight tracking-wide md:text-7xl"
+        <div
+          id="name-overlay"
+          class="font-didot w-fit rounded-2xl px-2 pt-2 pb-3 text-5xl font-extralight tracking-wide md:text-7xl"
         >
           Wendy Dherin
         </div>
-        <div class="roles flex flex-col text-2xl font-extralight md:text-4xl">
-          <div id="dev-overlay" class="text-white">full-stack developer.</div>
-          <div id="generative-artist-overlay" class="text-white">
+        <div class="flex flex-col text-2xl font-extralight md:text-4xl">
+          <div id="dev-overlay" class="w-fit rounded-2xl px-2 py-1 text-white">
+            full-stack developer.
+          </div>
+          <div
+            id="generative-artist-overlay"
+            class="w-fit rounded-2xl px-2 py-1 text-white"
+          >
             generative artist.
           </div>
         </div>
@@ -120,113 +126,213 @@
       <section id="dev-experience" class="scroll-mt-[65px]">
         <p class="text-md pb-2 text-center lg:text-2xl">Check out my</p>
         <div class="pb-7 text-center text-4xl lg:text-5xl">Dev Experience</div>
-        <div class="flex justify-center mb-6">
+        <div class="mb-6 flex justify-center">
           <a href="./assets/wendydherin.pdf" download="wendy_dherin_resume">
-            <button class="bg-sand text-black w-[160px] px-6 py-1 rounded-full mr-10">Resume</button>
+            <button
+              class="bg-sand mr-10 w-[160px] rounded-full px-6 py-1 text-black"
+            >
+              Resume
+            </button>
           </a>
           <a href="https://www.linkedin.com/in/wendydherin/" target="_blank">
-            <button class="border px-6 py-1 border-sand w-[160px] rounded-full">LinkedIn</button>
+            <button class="border-sand w-[160px] rounded-full border px-6 py-1">
+              LinkedIn
+            </button>
           </a>
         </div>
-        <p>With more than 10 years of experience at high-growth startups, I
-          thrive in a fast-paced, remote-first working environment.</p>
-        <p>As a natural leader and skilled communicator, I’m at my best when leading
-          cross-functional projects from roadmap to release: shaping, scoping,
-          and coordinating the work; keeping stakeholders aligned and in the
-          loop; and delivering high-quality, well-tested code on time.</p>
-        <p>I think strategically and act pragmatically, balancing technical tradeoffs
-          with product and business goals to keep projects moving forward.</p>
-        <p>I’m passionate about building products that users love and that engineers
-          are proud of, and I take great joy in mentoring newer engineers.</p>
-        <p>My superpowers are discernment, authenticity, clarity, thoroughness,
-          reliability, and empathy.</p>
+        <p>
+          With more than 10 years of experience at high-growth startups, I
+          thrive in a fast-paced, remote-first working environment.
+        </p>
+        <p>
+          As a natural leader and skilled communicator, I’m at my best when
+          leading cross-functional projects from roadmap to release: shaping,
+          scoping, and coordinating the work; keeping stakeholders aligned and
+          in the loop; and delivering high-quality, well-tested code on time.
+        </p>
+        <p>
+          I think strategically and act pragmatically, balancing technical
+          tradeoffs with product and business goals to keep projects moving
+          forward.
+        </p>
+        <p>
+          I’m passionate about building products that users love and that
+          engineers are proud of, and I take great joy in mentoring newer
+          engineers.
+        </p>
+        <p>
+          My superpowers are discernment, authenticity, clarity, thoroughness,
+          reliability, and empathy.
         </p>
       </section>
       <section id="generative-art" class="scroll-mt-[65px]">
         <p class="text-md pb-2 text-center">Browse my recent</p>
         <div class="pb-7 text-center text-4xl">Generative Art</div>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="assets/istina.gif"
-                  alt="gif of the Istina project -- a rotating golden white globe mandala that oscillates in complexity"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-subtitle project-title">"Mandala Effect "</h2>
-              <div class="flex justify-center gap-[1rem]">
-                <button
-                  class="btn border border-sand cursor-pointer"
-                  onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/istina.js', '_blank')"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn border border-sand cursor-pointer"
-                  onclick="location.href='istina.html'"
-                >
-                  Live Demo
-                </button>
-              </div>
+        <div
+          class="flex flex-col justify-center gap-10 md:flex-row md:flex-wrap"
+        >
+          <div class="flex flex-col items-center">
+            <img
+              src="assets/mandala-effect.gif"
+              alt="gif of the Istina project -- a rotating golden white globe mandala that oscillates in complexity"
+              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
+            />
+            <div class="my-5 text-xl text-white">“Mandala Effect”</div>
+            <div class="flex flex-col justify-center gap-[1rem]">
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/mandala-effect.js', '_blank')"
+              >
+                see the code
+              </button>
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="location.href='mandala-effect.html'"
+              >
+                see the thing
+              </button>
             </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="assets/noise-flower.png"
-                  alt="Perlin noise flower"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-subtitle project-title">Noise Flower</h2>
-              <div class="flex justify-center gap-[1rem]">
-                <button
-                  class="btn border border-sand cursor-pointer"
-                  onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/noise-flower.js', '_blank')"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn border border-sand cursor-pointer"
-                  onclick="location.href='noise-flower.html'"
-                >
-                  Live Demo
-                </button>
-              </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="assets/noise-flower.png"
+              alt="Perlin noise flower"
+              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
+            />
+            <div class="my-5 text-xl text-white">“Noise Flower”</div>
+            <div class="flex flex-col justify-center gap-[1rem]">
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/noise-flower.js', '_blank')"
+              >
+                see the code
+              </button>
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="location.href='noise-flower.html'"
+              >
+                see the thing
+              </button>
             </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="assets/rippling-spots.gif"
-                  alt="rippling spots image"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-subtitle project-title">Rippling Spots</h2>
-              <div class="flex justify-center gap-[1rem]">
-                <button
-                  class="btn border border-sand cursor-pointer"
-                  onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/rippling-spots.js', '_blank')"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn border border-sand cursor-pointer"
-                  onclick="location.href='rippling-spots.html'"
-                >
-                  Live Demo
-                </button>
-              </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="assets/rippling-spots.gif"
+              alt="rippling spots image"
+              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
+            />
+            <div class="my-5 text-xl text-white">“Rippling Spots”</div>
+            <div class="flex flex-col justify-center gap-[1rem]">
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/rippling-spots.js', '_blank')"
+              >
+                see the code
+              </button>
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="location.href='rippling-spots.html'"
+              >
+                see the thing
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="assets/peter.png"
+              alt="beige background with various triangular shapes: solid triangles and triangles made of dots, and colored powder blue, brick red, or mustard yellow."
+              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
+            />
+            <div class="my-5 text-xl text-white">“Peter”</div>
+            <div class="flex flex-col justify-center gap-[1rem]">
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/peter.js', '_blank')"
+              >
+                see the code
+              </button>
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="location.href='peter.html'"
+              >
+                see the thing
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="assets/amalgamania.png"
+              alt="beige background with various overlapping teal and orange circles"
+              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
+            />
+            <div class="my-5 text-xl text-white">“Amalgamania”</div>
+            <div class="flex flex-col justify-center gap-[1rem]">
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/amalgamania.js', '_blank')"
+              >
+                see the code
+              </button>
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="location.href='amalgamania.html'"
+              >
+                see the thing
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="assets/insecurity.png"
+              alt="beige background with various overlapping teal and orange circles"
+              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
+            />
+            <div class="my-5 text-xl text-white">“Insecurity”</div>
+            <div class="flex flex-col justify-center gap-[1rem]">
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/insecurity.js', '_blank')"
+              >
+                see the code
+              </button>
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="location.href='insecurity.html'"
+              >
+                see the thing
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="assets/doubt.gif"
+              alt="bright yellow background with a vertical stacking of 20 instances of the word DOUBT written in all capital letters, starting in black and getting lighter, until its white. The vertical stack of the word DOUBT is waving like a snake."
+              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
+            />
+            <div class="my-5 text-xl text-white">“Doubt”</div>
+            <div class="flex flex-col justify-center gap-[1rem]">
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/doubt.js', '_blank')"
+              >
+                see the code
+              </button>
+              <button
+                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
+                onclick="location.href='doubt.html'"
+              >
+                see the thing
+              </button>
             </div>
           </div>
         </div>
       </section>
     </div>
 
-    <footer>
+    <footer class="border-sand mt-14 border-t pt-2 text-center text-sm">
       <p>Copyright &#169; 2025 Wendy Dherin. All rights reserved.</p>
     </footer>
+    <script src="/javascript/scrollToAnchor.js"></script>
     <script src="/javascript/toggleMenu.js"></script>
     <script src="/javascript/sketches/sandGrain.js"></script>
     <script src="/javascript/sketches/p5Canvas.js"></script>
