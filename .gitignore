@@ -2,3 +2,4 @@ node_modules/
 .vscode/
 .vite/
 dist/
+.DS_Store
