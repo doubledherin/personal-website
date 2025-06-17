@@ -1,25 +1,28 @@
 class Particle {
   constructor() {
+    // starting direction
+    this.heading = random(360);
+
     // starting location
     this.x = random(width);
     this.y = random(height);
 
-    // starting direction
-    this.heading = random(360);
-    this.vx = cos(this.heading);
-    this.vy = sin(this.heading);
+    this.speed = 0.5;
+
+    // next location
+    this.newX = cos(this.heading) * this.speed;
+    this.newY = sin(this.heading) * this.speed;
 
     // size
-    this.r = 1;
+    this.r = 0.5;
 
     // sensor initialization
+    this.frontSensorPosition = createVector(0, 0);
     this.rightSensorPosition = createVector(0, 0);
     this.leftSensorPosition = createVector(0, 0);
-    this.frontSensorPosition = createVector(0, 0);
 
-    this.rotationAngle = 48;
     this.sensorAngle = 48;
-    this.sensorDistance = 48;
+    this.sensorDistance = 5;
   }
 
   display() {
@@ -29,11 +32,11 @@ class Particle {
   }
 
   update() {
-    this.vx = cos(this.heading);
-    this.vy = sin(this.heading);
+    this.newX = cos(this.heading) * this.speed;
+    this.newY = sin(this.heading) * this.speed;
 
-    this.x = (this.x + this.vx + width) % width;
-    this.y = (this.y + this.vy + height) % height;
+    this.x = (this.x + this.newX + width) % width;
+    this.y = (this.y + this.newY + height) % height;
 
     this.setSensorPosition(
       this.rightSensorPosition,
@@ -66,12 +69,12 @@ class Particle {
       this.heading += 0;
     } else if (f < l && f < r) {
       if (random(1) < 0.5) {
-        this.heading += this.rotationAngle;
+        this.heading += this.sensorAngle;
       }
     } else if (l > r) {
-      this.heading += -this.rotationAngle;
+      this.heading += -this.sensorAngle;
     } else if (r > l) {
-      this.heading += this.rotationAngle;
+      this.heading += this.sensorAngle;
     }
   }
 

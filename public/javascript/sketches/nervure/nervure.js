@@ -1,16 +1,15 @@
+const particleCount = 10000;
 let particles = [];
-const num = 10000;
 let d;
-let headingSlider, rotationAngleSlider, sensorAngleSlider, sensorDistanceSlider;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
+  d = pixelDensity();
 
-  for (let i = 0; i < num; i++) {
+  for (let i = 0; i < particleCount; i++) {
     particles.push(new Particle());
   }
-  d = pixelDensity();
 }
 
 function keyPressed() {
@@ -20,8 +19,8 @@ function keyPressed() {
 }
 
 function draw() {
-  background(10, 10);
   loadPixels();
+  background(10, 25, 100, 2);
   for (let particle of particles) {
     particle.update();
     particle.display();
