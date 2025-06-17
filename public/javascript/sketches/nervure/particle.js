@@ -23,7 +23,7 @@ class Particle {
     this.newX = cos(this.direction) * this.speed;
     this.newY = sin(this.direction) * this.speed;
 
-    // size
+    // size of particle
     this.r = 0.5;
 
     // sensor initialization
@@ -48,51 +48,28 @@ class Particle {
     this.x = (this.x + this.newX + width) % width;
     this.y = (this.y + this.newY + height) % height;
 
-    this.leftSensor.updatePosition(
-      this.x,
-      this.y,
-      this.direction - this.sensorAngle,
-    );
-    this.frontSensor.updatePosition(this.x, this.y, this.direction);
+    this.leftSensor.update(this.x, this.y, this.direction - this.sensorAngle);
+    this.frontSensor.update(this.x, this.y, this.direction);
 
-    this.rightSensor.updatePosition(
-      this.x,
-      this.y,
-      this.direction + this.sensorAngle,
-    );
-
-    let index, rValueOfRightSensor, rValueOfLeftSensor, rValueOfFrontSensor;
-
-    index =
-      4 * (d * floor(this.leftSensor.position.y)) * (d * width) +
-      4 * (d * floor(this.leftSensor.position.x));
-    rValueOfLeftSensor = pixels[index];
-
-    index =
-      4 * (d * floor(this.frontSensor.position.y)) * (d * width) +
-      4 * (d * floor(this.frontSensor.position.x));
-    rValueOfFrontSensor = pixels[index];
-
-    index =
-      4 * (d * floor(this.rightSensor.position.y)) * (d * width) +
-      4 * (d * floor(this.rightSensor.position.x));
-    rValueOfRightSensor = pixels[index];
+    this.rightSensor.update(this.x, this.y, this.direction + this.sensorAngle);
 
     if (
-      rValueOfFrontSensor > rValueOfLeftSensor &&
-      rValueOfFrontSensor > rValueOfRightSensor
+      this.frontSensor.colorValue > this.leftSensor.colorValue &&
+      this.frontSensor.colorValue > this.rightSensor.colorValue
     ) {
+      // front sensor wins, keep going straight
       this.direction += 0;
     } else if (
-      rValueOfFrontSensor < rValueOfLeftSensor &&
-      rValueOfFrontSensor < rValueOfRightSensor
+      this.frontSensor.colorValue < this.leftSensor.colorValue &&
+      this.frontSensor.colorValue < this.rightSensor.colorValue
     ) {
+      // front sensor is lower than left and right, so randomly choose to go left or right
       if (random(1) < 0.5) {
         this.direction += this.sensorAngle;
       }
-    } else if (rValueOfLeftSensor > rValueOfRightSensor) {
+    } else if (this.leftSensor.colorValue > this.rightSensor.colorValue) {
       this.direction += -this.sensorAngle;
-    } else if (rValueOfRightSensor > rValueOfLeftSensor) {
+    } else if (this.rightSensor.colorValue > this.leftSensor.colorValue) {
       this.direction += this.sensorAngle;
     }
   }

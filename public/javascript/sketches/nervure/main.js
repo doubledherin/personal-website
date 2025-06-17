@@ -1,11 +1,11 @@
 const particleCount = 10000;
 let particles = [];
-let d;
+let pixelDensityValue;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
-  d = pixelDensity();
+  pixelDensityValue = pixelDensity();
 
   for (let i = 0; i < particleCount; i++) {
     particles.push(new Particle());
