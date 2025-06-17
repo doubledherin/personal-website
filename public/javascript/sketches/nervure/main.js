@@ -12,12 +12,6 @@ function setup() {
   }
 }
 
-function keyPressed() {
-  if (key === "s") {
-    saveGif("nervure", 5);
-  }
-}
-
 function draw() {
   loadPixels();
   background(10, 25, 100, 2);
