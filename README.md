@@ -2,6 +2,10 @@
 
 A personal website showcasing my work as a full-stack developer and generative artist. Built with Vite, Tailwind CSS, and p5.js for interactive generative art pieces.
 
+I purposely built the site without React, because I've been using (and loving) React since it came out, and I wanted to test my chops with pure vanilla HTML and JavaScript.
+
+I will probably convert this to a React app at some point though, to leverage reusability and state management more easily.
+
 ## Features
 
 - **Responsive Design**: Mobile-first design with Tailwind CSS
