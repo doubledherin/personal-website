@@ -12,7 +12,7 @@ const artPieces = [
     id: "steady-nerves",
     title: '"Steady Nerves"',
     inspiration:
-      "Chladni patterns visualization commissioned by the band Chaos Fiction.Inspired by Ernst Chladni's acoustic experiments, this piece visualizes how sound frequencies create beautiful geometric patterns. Created as promotional material for Chaos Fiction's album release.",
+      "Chladni patterns visualization commissioned by the band Chaos Fiction. Inspired by Ernst Chladni's acoustic experiments, this piece visualizes how sound frequencies create beautiful geometric patterns. Created as promotional material for Chaos Fiction's album release.",
     url: "steady-nerves.html",
     codeUrl:
       "https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/steady-nerves",
@@ -96,12 +96,18 @@ function openArtModal(artId) {
   // Show modal
   document.getElementById("art-modal").classList.remove("hidden");
   document.body.style.overflow = "hidden";
+
+  // Add resize listener to handle orientation changes
+  window.addEventListener("resize", handleModalResize);
 }
 
 function closeArtModal() {
   document.getElementById("art-modal").classList.add("hidden");
   document.getElementById("modal-iframe").src = "";
   document.body.style.overflow = "auto";
+
+  // Remove resize listener
+  window.removeEventListener("resize", handleModalResize);
 }
 
 function nextArt() {
@@ -127,6 +133,17 @@ function updateModalContent(art) {
     window.open(art.codeUrl, "_blank");
 }
 
+function handleModalResize() {
+  // Force iframe to recalculate its dimensions on resize
+  const iframe = document.getElementById("modal-iframe");
+  if (iframe && iframe.src) {
+    // Small delay to ensure layout has updated
+    setTimeout(() => {
+      iframe.style.height = iframe.style.height;
+    }, 100);
+  }
+}
+
 // Keyboard navigation
 document.addEventListener("keydown", (e) => {
   if (!document.getElementById("art-modal").classList.contains("hidden")) {
@@ -148,5 +165,43 @@ document.addEventListener("keydown", (e) => {
 document.getElementById("art-modal").addEventListener("click", (e) => {
   if (e.target === document.getElementById("art-modal")) {
     closeArtModal();
+  }
+});
+
+// Handle touch gestures for mobile navigation
+let startX = null;
+let startY = null;
+
+document.getElementById("art-modal").addEventListener("touchstart", (e) => {
+  if (!document.getElementById("art-modal").classList.contains("hidden")) {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }
+});
+
+document.getElementById("art-modal").addEventListener("touchend", (e) => {
+  if (
+    !document.getElementById("art-modal").classList.contains("hidden") &&
+    startX !== null &&
+    startY !== null
+  ) {
+    const endX = e.changedTouches[0].clientX;
+    const endY = e.changedTouches[0].clientY;
+    const diffX = startX - endX;
+    const diffY = startY - endY;
+
+    // Only trigger if horizontal swipe is greater than vertical
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        // Swipe left - next art
+        nextArt();
+      } else {
+        // Swipe right - previous art
+        previousArt();
+      }
+    }
+
+    startX = null;
+    startY = null;
   }
 });
