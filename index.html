@@ -176,207 +176,419 @@
         <div class="pb-7 text-xl">
           In particular, "Steady Nerves" is a spinoff of a Patt Vira tutorial on
           Chladni patterns, and was commissioned by the band Chaos Fiction to
-          promote the release of their new album. “Mandala Effect” is a spinoff
-          of a tutorial released by The Dot Is Black. “Rippling Spots” is from a
-          tutorial by Etienne Jacobs, and “Doubt” is inspired by a Patt Vira
+          promote the release of their new album. "Mandala Effect" is a spinoff
+          of a tutorial released by The Dot Is Black. "Rippling Spots" is from a
+          tutorial by Etienne Jacobs, and "Doubt" is inspired by a Patt Vira
           tutorial on using the OpenType library with p5.js.
         </div>
         <div class="pb-7 text-xl">
-          Other works are purely original. I’ve learned the most from Dan
+          Other works are purely original. I've learned the most from Dan
           Shiffman — both from his Coding Train videos and his
           <i>Nature of Code</i>
-          book — and from Patt Vira's videos, and I’m so grateful for their
+          book — and from Patt Vira's videos, and I'm so grateful for their
           generous teachings.
         </div>
-        <div
-          class="flex flex-col justify-center gap-10 md:flex-row md:flex-wrap"
-        >
-          <div class="flex flex-col items-center">
-            <img
-              src="assets/nervure.gif"
-              alt="gif of the Nervure work -- a black background with white particles converging into intricate natural nerve-like patterns"
-              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
-            />
-            <div class="my-5 text-xl text-white">“Nervure”</div>
-            <div class="flex flex-col justify-center gap-[1rem]">
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/nervure', '_blank')"
+        <!-- New Interactive Grid -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Nervure -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black"
+            onclick="openArtModal('nervure')"
+          >
+            <div class="relative h-[300px] w-full">
+              <img
+                src="assets/nervure.gif"
+                alt="Nervure generative art"
+                class="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="text-xl font-medium text-white">"Nervure"</div>
+                <div class="mt-1 text-sm text-gray-300">
+                  Slime mold simulation
+                </div>
+              </div>
+              <!-- Hover overlay -->
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-all duration-300 group-hover:opacity-100"
               >
-                see the code
-              </button>
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="location.href='nervure.html'"
-              >
-                see the thing
-              </button>
+                <div class="flex flex-col gap-3">
+                  <button
+                    class="bg-sand hover:bg-sand/90 rounded-lg px-6 py-2 font-medium text-black transition-colors"
+                  >
+                    View Live
+                  </button>
+                  <button
+                    class="border-sand text-sand hover:bg-sand rounded-lg border px-6 py-2 font-medium transition-colors hover:text-black"
+                    onclick="event.stopPropagation(); window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/nervure', '_blank')"
+                  >
+                    See Code
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex flex-col items-center">
-            <img
-              src="assets/steady-nerves.gif"
-              alt="gif of the Steady Nerves artpiece-- a black background with golden sand converging into intricate Chladni patterns"
-              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
-            />
-            <div class="my-5 text-xl text-white">“Steady Nerves”</div>
-            <div class="flex flex-col justify-center gap-[1rem]">
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/steady-nerves', '_blank')"
+
+          <!-- Steady Nerves -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black"
+            onclick="openArtModal('steady-nerves')"
+          >
+            <div class="relative h-[300px] w-full">
+              <img
+                src="assets/steady-nerves.gif"
+                alt="Steady Nerves generative art"
+                class="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="text-xl font-medium text-white">
+                  "Steady Nerves"
+                </div>
+                <div class="mt-1 text-sm text-gray-300">Chladni patterns</div>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-all duration-300 group-hover:opacity-100"
               >
-                see the code
-              </button>
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="location.href='steady-nerves.html'"
-              >
-                see the thing
-              </button>
+                <div class="flex flex-col gap-3">
+                  <button
+                    class="bg-sand hover:bg-sand/90 rounded-lg px-6 py-2 font-medium text-black transition-colors"
+                  >
+                    View Live
+                  </button>
+                  <button
+                    class="border-sand text-sand hover:bg-sand rounded-lg border px-6 py-2 font-medium transition-colors hover:text-black"
+                    onclick="event.stopPropagation(); window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/steady-nerves', '_blank')"
+                  >
+                    See Code
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex flex-col items-center">
-            <img
-              src="assets/mandala-effect.gif"
-              alt="gif of the Istina project -- a rotating golden white globe mandala that oscillates in complexity"
-              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
-            />
-            <div class="my-5 text-xl text-white">“Mandala Effect”</div>
-            <div class="flex flex-col justify-center gap-[1rem]">
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/mandala-effect.js', '_blank')"
+
+          <!-- Mandala Effect -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black"
+            onclick="openArtModal('mandala-effect')"
+          >
+            <div class="relative h-[300px] w-full">
+              <img
+                src="assets/mandala-effect.gif"
+                alt="Mandala Effect generative art"
+                class="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="text-xl font-medium text-white">
+                  "Mandala Effect"
+                </div>
+                <div class="mt-1 text-sm text-gray-300">Rotating mandala</div>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-all duration-300 group-hover:opacity-100"
               >
-                see the code
-              </button>
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="location.href='mandala-effect.html'"
-              >
-                see the thing
-              </button>
+                <div class="flex flex-col gap-3">
+                  <button
+                    class="bg-sand hover:bg-sand/90 rounded-lg px-6 py-2 font-medium text-black transition-colors"
+                  >
+                    View Live
+                  </button>
+                  <button
+                    class="border-sand text-sand hover:bg-sand rounded-lg border px-6 py-2 font-medium transition-colors hover:text-black"
+                    onclick="event.stopPropagation(); window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/mandala-effect.js', '_blank')"
+                  >
+                    See Code
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex flex-col items-center">
-            <img
-              src="assets/noise-flower.png"
-              alt="Perlin noise flower"
-              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
-            />
-            <div class="my-5 text-xl text-white">“Noise Flower”</div>
-            <div class="flex flex-col justify-center gap-[1rem]">
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/noise-flower.js', '_blank')"
+
+          <!-- Noise Flower -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black"
+            onclick="openArtModal('noise-flower')"
+          >
+            <div class="relative h-[300px] w-full">
+              <img
+                src="assets/noise-flower.png"
+                alt="Noise Flower generative art"
+                class="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="text-xl font-medium text-white">"Noise Flower"</div>
+                <div class="mt-1 text-sm text-gray-300">
+                  Perlin noise pattern
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-all duration-300 group-hover:opacity-100"
               >
-                see the code
-              </button>
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="location.href='noise-flower.html'"
-              >
-                see the thing
-              </button>
+                <div class="flex flex-col gap-3">
+                  <button
+                    class="bg-sand hover:bg-sand/90 rounded-lg px-6 py-2 font-medium text-black transition-colors"
+                  >
+                    View Live
+                  </button>
+                  <button
+                    class="border-sand text-sand hover:bg-sand rounded-lg border px-6 py-2 font-medium transition-colors hover:text-black"
+                    onclick="event.stopPropagation(); window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/noise-flower.js', '_blank')"
+                  >
+                    See Code
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex flex-col items-center">
-            <img
-              src="assets/rippling-spots.gif"
-              alt="rippling spots image"
-              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
-            />
-            <div class="my-5 text-xl text-white">“Rippling Spots”</div>
-            <div class="flex flex-col justify-center gap-[1rem]">
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/rippling-spots.js', '_blank')"
+
+          <!-- Rippling Spots -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black"
+            onclick="openArtModal('rippling-spots')"
+          >
+            <div class="relative h-[300px] w-full">
+              <img
+                src="assets/rippling-spots.gif"
+                alt="Rippling Spots generative art"
+                class="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="text-xl font-medium text-white">
+                  "Rippling Spots"
+                </div>
+                <div class="mt-1 text-sm text-gray-300">Rippling animation</div>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-all duration-300 group-hover:opacity-100"
               >
-                see the code
-              </button>
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="location.href='rippling-spots.html'"
-              >
-                see the thing
-              </button>
+                <div class="flex flex-col gap-3">
+                  <button
+                    class="bg-sand hover:bg-sand/90 rounded-lg px-6 py-2 font-medium text-black transition-colors"
+                  >
+                    View Live
+                  </button>
+                  <button
+                    class="border-sand text-sand hover:bg-sand rounded-lg border px-6 py-2 font-medium transition-colors hover:text-black"
+                    onclick="event.stopPropagation(); window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/rippling-spots.js', '_blank')"
+                  >
+                    See Code
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex flex-col items-center">
-            <img
-              src="assets/peter.png"
-              alt="beige background with various triangular shapes: solid triangles and triangles made of dots, and colored powder blue, brick red, or mustard yellow."
-              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
-            />
-            <div class="my-5 text-xl text-white">“Peter”</div>
-            <div class="flex flex-col justify-center gap-[1rem]">
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/peter.js', '_blank')"
+
+          <!-- Peter -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black"
+            onclick="openArtModal('peter')"
+          >
+            <div class="relative h-[300px] w-full">
+              <img
+                src="assets/peter.png"
+                alt="Peter generative art"
+                class="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="text-xl font-medium text-white">"Peter"</div>
+                <div class="mt-1 text-sm text-gray-300">Triangular shapes</div>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-all duration-300 group-hover:opacity-100"
               >
-                see the code
-              </button>
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="location.href='peter.html'"
-              >
-                see the thing
-              </button>
+                <div class="flex flex-col gap-3">
+                  <button
+                    class="bg-sand hover:bg-sand/90 rounded-lg px-6 py-2 font-medium text-black transition-colors"
+                  >
+                    View Live
+                  </button>
+                  <button
+                    class="border-sand text-sand hover:bg-sand rounded-lg border px-6 py-2 font-medium transition-colors hover:text-black"
+                    onclick="event.stopPropagation(); window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/peter.js', '_blank')"
+                  >
+                    See Code
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex flex-col items-center">
-            <img
-              src="assets/insecurity.png"
-              alt="beige background with various overlapping teal and orange circles"
-              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
-            />
-            <div class="my-5 text-xl text-white">“Insecurity”</div>
-            <div class="flex flex-col justify-center gap-[1rem]">
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/insecurity.js', '_blank')"
+
+          <!-- Insecurity -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black"
+            onclick="openArtModal('insecurity')"
+          >
+            <div class="relative h-[300px] w-full">
+              <img
+                src="assets/insecurity.png"
+                alt="Insecurity generative art"
+                class="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="text-xl font-medium text-white">"Insecurity"</div>
+                <div class="mt-1 text-sm text-gray-300">
+                  Overlapping circles
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-all duration-300 group-hover:opacity-100"
               >
-                see the code
-              </button>
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="location.href='insecurity.html'"
-              >
-                see the thing
-              </button>
+                <div class="flex flex-col gap-3">
+                  <button
+                    class="bg-sand hover:bg-sand/90 rounded-lg px-6 py-2 font-medium text-black transition-colors"
+                  >
+                    View Live
+                  </button>
+                  <button
+                    class="border-sand text-sand hover:bg-sand rounded-lg border px-6 py-2 font-medium transition-colors hover:text-black"
+                    onclick="event.stopPropagation(); window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/insecurity.js', '_blank')"
+                  >
+                    See Code
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex flex-col items-center">
-            <img
-              src="assets/doubt.gif"
-              alt="bright yellow background with a vertical stacking of 20 instances of the word DOUBT written in all capital letters, starting in black and getting lighter, until its white. The vertical stack of the word DOUBT is waving like a snake."
-              class="h-[300px] w-[300px] rounded-2xl border border-white object-cover"
-            />
-            <div class="my-5 text-xl text-white">“Doubt”</div>
-            <div class="flex flex-col justify-center gap-[1rem]">
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/doubt.js', '_blank')"
+
+          <!-- Doubt -->
+          <div
+            class="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black"
+            onclick="openArtModal('doubt')"
+          >
+            <div class="relative h-[300px] w-full">
+              <img
+                src="assets/doubt.gif"
+                alt="Doubt generative art"
+                class="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="text-xl font-medium text-white">"Doubt"</div>
+                <div class="mt-1 text-sm text-gray-300">
+                  Typography animation
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-all duration-300 group-hover:opacity-100"
               >
-                see the code
-              </button>
-              <button
-                class="border-sand cursor-pointer rounded-2xl border px-5 py-1 hover:border-white hover:text-white"
-                onclick="location.href='/doubt.html'"
-              >
-                see the thing
-              </button>
+                <div class="flex flex-col gap-3">
+                  <button
+                    class="bg-sand hover:bg-sand/90 rounded-lg px-6 py-2 font-medium text-black transition-colors"
+                  >
+                    View Live
+                  </button>
+                  <button
+                    class="border-sand text-sand hover:bg-sand rounded-lg border px-6 py-2 font-medium transition-colors hover:text-black"
+                    onclick="event.stopPropagation(); window.open('https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/doubt.js', '_blank')"
+                  >
+                    See Code
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </div>
 
+    <!-- Art Modal -->
+    <div
+      id="art-modal"
+      class="fixed inset-0 z-50 flex hidden items-center justify-center bg-black/95"
+    >
+      <div class="relative mx-auto flex h-full w-full max-w-7xl p-4">
+        <!-- Close button -->
+        <button
+          onclick="closeArtModal()"
+          class="hover:text-sand hover:border-sand/50 absolute top-6 right-6 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/50 text-2xl font-bold text-white transition-colors"
+        >
+          ×
+        </button>
+
+        <!-- Navigation arrows -->
+        <button
+          onclick="previousArt()"
+          class="hover:text-sand hover:border-sand/50 absolute top-1/2 left-6 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/50 text-2xl font-bold text-white transition-colors"
+        >
+          ‹
+        </button>
+        <button
+          onclick="nextArt()"
+          class="hover:text-sand hover:border-sand/50 absolute top-1/2 right-6 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/50 text-2xl font-bold text-white transition-colors"
+        >
+          ›
+        </button>
+
+        <!-- Content area -->
+        <div class="flex flex-1 items-center justify-center">
+          <iframe
+            id="modal-iframe"
+            class="h-full max-h-[80vh] w-full max-w-4xl rounded-lg border border-white/20"
+            frameborder="0"
+          ></iframe>
+        </div>
+
+        <!-- Info panel -->
+        <div
+          class="ml-4 w-80 overflow-y-auto rounded-lg border border-white/10 bg-black/50 p-8"
+        >
+          <h2 id="modal-title" class="mb-4 text-3xl font-light text-white"></h2>
+
+          <div class="space-y-4">
+            <button
+              id="modal-view-button"
+              class="bg-sand hover:bg-sand/90 w-full rounded-lg px-6 py-3 font-medium text-black transition-colors"
+            >
+              View Fullscreen
+            </button>
+            <button
+              id="modal-code-button"
+              class="border-sand text-sand hover:bg-sand w-full rounded-lg border px-6 py-3 font-medium transition-colors hover:text-black"
+            >
+              View Source Code
+            </button>
+          </div>
+
+          <div class="mt-8 border-t border-white/10 pt-6">
+            <h3 class="mb-3 text-lg text-white">About this piece</h3>
+            <p
+              id="modal-inspiration"
+              class="text-sm leading-relaxed text-gray-400"
+            ></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="border-sand mt-14 border-t pt-2 text-center text-sm">
       <p>Copyright &#169; 2025 Wendy Dherin. All rights reserved.</p>
     </footer>
+
     <script src="/javascript/scrollToAnchor.js"></script>
     <script src="/javascript/toggleMenu.js"></script>
     <script src="/javascript/sketches/steady-nerves/sand-grain.js"></script>
     <script src="/javascript/sketches/steady-nerves/steady-nerves.js"></script>
+    <script src="/javascript/artModal.js"></script>
   </body>
 </html>
