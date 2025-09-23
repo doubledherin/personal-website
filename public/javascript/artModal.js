@@ -1,0 +1,207 @@
+const artPieces = [
+  {
+    id: "nervure",
+    title: '"Nervure"',
+    inspiration:
+      "A slime mold simulation that creates organic, nerve-like patterns through particle behavior. This piece explores the emergent patterns found in nature, specifically how simple rules governing individual particles can create complex, beautiful structures reminiscent of neural networks or leaf venation.",
+    url: "nervure.html",
+    codeUrl:
+      "https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/nervure",
+  },
+  {
+    id: "steady-nerves",
+    title: '"Steady Nerves"',
+    inspiration:
+      "Chladni patterns visualization commissioned by the band Chaos Fiction. Inspired by Ernst Chladni's acoustic experiments, this piece visualizes how sound frequencies create beautiful geometric patterns. Created as promotional material for Chaos Fiction's album release.",
+    url: "steady-nerves.html",
+    codeUrl:
+      "https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/steady-nerves",
+  },
+  {
+    id: "mandala-effect",
+    title: '"Mandala Effect"',
+    inspiration:
+      "A rotating mandala that oscillates in complexity, creating mesmerizing geometric patterns. Based on a tutorial by The Dot Is Black, this piece explores the meditative quality of rotating geometric forms and how mathematical functions can create organic, breathing movements.",
+    url: "mandala-effect.html",
+    codeUrl:
+      "https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/mandala-effect.js",
+  },
+  {
+    id: "noise-flower",
+    title: '"Noise Flower"',
+    inspiration:
+      "A delicate flower pattern generated using Perlin noise algorithms. This original work explores how Perlin noise can create organic, natural-looking forms. The piece demonstrates how mathematical randomness can mirror the seemingly chaotic yet beautiful patterns found in nature.",
+    url: "noise-flower.html",
+    codeUrl:
+      "https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/noise-flower.js",
+  },
+  {
+    id: "rippling-spots",
+    title: '"Rippling Spots"',
+    inspiration:
+      "An animated rippling effect that creates mesmerizing wave patterns. Based on a tutorial by Etienne Jacobs, this piece captures the hypnotic quality of water ripples and interference patterns, translated into a digital medium.",
+    url: "rippling-spots.html",
+    codeUrl:
+      "https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/rippling-spots.js",
+  },
+  {
+    id: "peter",
+    title: '"Peter"',
+    inspiration:
+      "Triangular shapes in various colors and forms on a beige background. This original composition explores the relationship between geometric forms and color theory, investigating how simple shapes can create complex visual relationships through arrangement and palette.",
+    url: "peter.html",
+    codeUrl:
+      "https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/peter.js",
+  },
+  {
+    id: "insecurity",
+    title: '"Insecurity"',
+    inspiration:
+      "Overlapping circles in teal and orange, exploring themes of vulnerability and connection. This piece examines the visual metaphor of personal boundaries and emotional states through overlapping geometric forms, using color theory to convey psychological concepts.",
+    url: "insecurity.html",
+    codeUrl:
+      "https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/insecurity.js",
+  },
+  {
+    id: "doubt",
+    title: '"Doubt"',
+    inspiration:
+      "Typography animation featuring the word DOUBT in a waving, snake-like motion. Inspired by Patt Vira's tutorial on using the OpenType library with p5.js, this piece explores how text can become a living, breathing entity that embodies the emotional weight of the word itself.",
+    url: "doubt.html",
+    codeUrl:
+      "https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/doubt.js",
+  },
+];
+
+let currentArtIndex = 0;
+
+function openArtModal(artId) {
+  const artIndex = artPieces.findIndex((art) => art.id === artId);
+  if (artIndex === -1) return;
+
+  currentArtIndex = artIndex;
+  const art = artPieces[currentArtIndex];
+
+  // Update modal content
+  document.getElementById("modal-title").textContent = art.title;
+  document.getElementById("modal-inspiration").textContent = art.inspiration;
+  document.getElementById("modal-iframe").src = art.url;
+
+  // Update buttons
+  document.getElementById("modal-view-button").onclick = () =>
+    window.open(art.url, "_blank");
+  document.getElementById("modal-code-button").onclick = () =>
+    window.open(art.codeUrl, "_blank");
+
+  // Show modal
+  document.getElementById("art-modal").classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+
+  // Add resize listener to handle orientation changes
+  window.addEventListener("resize", handleModalResize);
+}
+
+function closeArtModal() {
+  document.getElementById("art-modal").classList.add("hidden");
+  document.getElementById("modal-iframe").src = "";
+  document.body.style.overflow = "auto";
+
+  // Remove resize listener
+  window.removeEventListener("resize", handleModalResize);
+}
+
+function nextArt() {
+  currentArtIndex = (currentArtIndex + 1) % artPieces.length;
+  const art = artPieces[currentArtIndex];
+  updateModalContent(art);
+}
+
+function previousArt() {
+  currentArtIndex = (currentArtIndex - 1 + artPieces.length) % artPieces.length;
+  const art = artPieces[currentArtIndex];
+  updateModalContent(art);
+}
+
+function updateModalContent(art) {
+  document.getElementById("modal-title").textContent = art.title;
+  document.getElementById("modal-inspiration").textContent = art.inspiration;
+  document.getElementById("modal-iframe").src = art.url;
+
+  document.getElementById("modal-view-button").onclick = () =>
+    window.open(art.url, "_blank");
+  document.getElementById("modal-code-button").onclick = () =>
+    window.open(art.codeUrl, "_blank");
+}
+
+function handleModalResize() {
+  // Force iframe to recalculate its dimensions on resize
+  const iframe = document.getElementById("modal-iframe");
+  if (iframe && iframe.src) {
+    // Small delay to ensure layout has updated
+    setTimeout(() => {
+      iframe.style.height = iframe.style.height;
+    }, 100);
+  }
+}
+
+// Keyboard navigation
+document.addEventListener("keydown", (e) => {
+  if (!document.getElementById("art-modal").classList.contains("hidden")) {
+    switch (e.key) {
+      case "Escape":
+        closeArtModal();
+        break;
+      case "ArrowLeft":
+        previousArt();
+        break;
+      case "ArrowRight":
+        nextArt();
+        break;
+    }
+  }
+});
+
+// Close modal when clicking outside the content area
+document.getElementById("art-modal").addEventListener("click", (e) => {
+  if (e.target === document.getElementById("art-modal")) {
+    closeArtModal();
+  }
+});
+
+// Handle touch gestures for mobile navigation
+let startX = null;
+let startY = null;
+
+document.getElementById("art-modal").addEventListener("touchstart", (e) => {
+  if (!document.getElementById("art-modal").classList.contains("hidden")) {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }
+});
+
+document.getElementById("art-modal").addEventListener("touchend", (e) => {
+  if (
+    !document.getElementById("art-modal").classList.contains("hidden") &&
+    startX !== null &&
+    startY !== null
+  ) {
+    const endX = e.changedTouches[0].clientX;
+    const endY = e.changedTouches[0].clientY;
+    const diffX = startX - endX;
+    const diffY = startY - endY;
+
+    // Only trigger if horizontal swipe is greater than vertical
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        // Swipe left - next art
+        nextArt();
+      } else {
+        // Swipe right - previous art
+        previousArt();
+      }
+    }
+
+    startX = null;
+    startY = null;
+  }
+});
