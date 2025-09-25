@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Preload hints for critical resources -->
+    <!-- Move ALL preload hints to the top -->
     <link rel="preload" href="/libraries/p5.min.js" as="script" />
     <link
       rel="preload"
@@ -23,7 +23,32 @@
     <link rel="preload" href="/javascript/toggleMenu.js" as="script" />
     <link rel="preload" href="/javascript/artModal.js" as="script" />
 
+    <!-- Start timing BEFORE loading any scripts -->
+    <script>
+      console.time("script-loading");
+      console.log("Starting script loading diagnostics");
+    </script>
+
+    <!-- Load p5.js first -->
     <script src="/libraries/p5.min.js"></script>
+    <script>
+      console.log("p5.js loaded");
+    </script>
+
+    <!-- Load sketch scripts -->
+    <script src="/javascript/sketches/steady-nerves/sand-grain.js"></script>
+    <script>
+      console.log("sand-grain.js loaded");
+    </script>
+
+    <script src="/javascript/sketches/steady-nerves/steady-nerves.js"></script>
+    <script>
+      console.timeEnd("script-loading");
+      console.log(
+        "All critical scripts loaded, steady-nerves should start parsing",
+      );
+    </script>
+
     <script>
       if ("scrollRestoration" in history) {
         history.scrollRestoration = "manual";
