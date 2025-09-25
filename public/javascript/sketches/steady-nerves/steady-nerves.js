@@ -2,8 +2,19 @@ let boundingBox, corrois, m, n, sand, sandColor;
 let numberOfSandGrains;
 let navHeight = 65;
 
+console.time("script-parse");
+console.log("Script parsing started");
+
 function setup() {
+  console.timeEnd("script-parse");
+  console.time("p5-setup");
+  console.log("p5 setup started");
+
   const canvas = createCanvas(windowWidth, windowHeight - navHeight);
+  console.log("Canvas created");
+
+  canvas.parent("home");
+  console.log("Canvas attached to DOM");
 
   // If the path does not include "steady-nerves", then we are on the homepage
   // version of the artwork, and so must anchor the canvas to the DOM element with the "home" ID
@@ -18,6 +29,9 @@ function setup() {
   newVibration();
   cursor(HAND);
   loadPixels();
+
+  console.timeEnd("p5-setup");
+  console.log("Setup complete");
 }
 
 function newVibration() {
