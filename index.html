@@ -6,6 +6,39 @@
     <title>Wendy Dherin</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Preload hints for critical resources -->
+    <link rel="preload" href="/libraries/p5.min.js" as="script" />
+    <link
+      rel="preload"
+      href="/javascript/sketches/steady-nerves/sand-grain.js"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="/javascript/sketches/steady-nerves/steady-nerves.js"
+      as="script"
+    />
+    <link rel="preload" href="/javascript/scrollToAnchor.js" as="script" />
+    <link rel="preload" href="/javascript/toggleMenu.js" as="script" />
+    <link rel="preload" href="/javascript/artModal.js" as="script" />
+
+    <!-- Preload critical fonts -->
+    <link
+      rel="preload"
+      href="/assets/fonts/GFSDidot-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/Geoform-ExtraBold.otf"
+      as="font"
+      type="font/opentype"
+      crossorigin
+    />
+
     <script src="/libraries/p5.min.js"></script>
     <script>
       if ("scrollRestoration" in history) {
