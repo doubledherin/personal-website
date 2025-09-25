@@ -1,9 +1,22 @@
+console.time("script-parse");
+console.log("Script parsing started");
+
+// Override p5.js DOM waiting - force immediate start
+if (typeof window !== "undefined") {
+  console.log("Forcing p5.js to start immediately...");
+
+  // p5.js normally waits for window 'load' event
+  // We'll trigger it manually as soon as this script loads
+  if (document.readyState !== "complete") {
+    // Force the window load event to fire early
+    window.dispatchEvent(new Event("load"));
+    console.log("Dispatched early load event");
+  }
+}
+
 let boundingBox, corrois, m, n, sand, sandColor;
 let numberOfSandGrains;
 let navHeight = 65;
-
-console.time("script-parse");
-console.log("Script parsing started");
 
 function setup() {
   console.timeEnd("script-parse");
@@ -107,18 +120,5 @@ function draw() {
   for (let grain of sand) {
     grain.update();
     grain.show();
-  }
-}
-
-// Override p5.js DOM waiting - force immediate start
-if (typeof window !== "undefined") {
-  console.log("Forcing p5.js to start immediately...");
-
-  // p5.js normally waits for window 'load' event
-  // We'll trigger it manually as soon as this script loads
-  if (document.readyState !== "complete") {
-    // Force the window load event to fire early
-    window.dispatchEvent(new Event("load"));
-    console.log("Dispatched early load event");
   }
 }
