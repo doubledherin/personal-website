@@ -23,32 +23,6 @@
     <link rel="preload" href="/javascript/toggleMenu.js" as="script" />
     <link rel="preload" href="/javascript/artModal.js" as="script" />
 
-    <!-- Start timing BEFORE loading any scripts -->
-    <script>
-      console.time("script-loading");
-      console.log("Starting script loading diagnostics");
-    </script>
-
-    <!-- Load p5.js first -->
-    <script src="/libraries/p5.min.js"></script>
-    <script>
-      console.log("p5.js loaded");
-    </script>
-
-    <!-- Load sketch scripts -->
-    <script src="/javascript/sketches/steady-nerves/sand-grain.js"></script>
-    <script>
-      console.log("sand-grain.js loaded");
-    </script>
-
-    <script src="/javascript/sketches/steady-nerves/steady-nerves.js"></script>
-    <script>
-      console.timeEnd("script-loading");
-      console.log(
-        "All critical scripts loaded, steady-nerves should start parsing",
-      );
-    </script>
-
     <script>
       if ("scrollRestoration" in history) {
         history.scrollRestoration = "manual";
@@ -580,11 +554,34 @@
     <footer class="border-sand mt-14 border-t pt-2 text-center text-sm">
       <p>Copyright &#169; 2025 Wendy Dherin. All rights reserved.</p>
     </footer>
+    <!-- Start timing BEFORE loading any scripts -->
+    <script>
+      console.time("script-loading");
+      console.log("Starting script loading diagnostics");
+    </script>
+
+    <!-- Load p5.js first -->
+    <script src="/libraries/p5.min.js"></script>
+    <script>
+      console.log("p5.js loaded");
+    </script>
+
+    <!-- Load sketch scripts -->
+    <script src="/javascript/sketches/steady-nerves/sand-grain.js"></script>
+    <script>
+      console.log("sand-grain.js loaded");
+    </script>
+
+    <script src="/javascript/sketches/steady-nerves/steady-nerves.js"></script>
+    <script>
+      console.timeEnd("script-loading");
+      console.log(
+        "All critical scripts loaded, steady-nerves should start parsing",
+      );
+    </script>
 
     <script src="/javascript/scrollToAnchor.js"></script>
     <script src="/javascript/toggleMenu.js"></script>
-    <script src="/javascript/sketches/steady-nerves/sand-grain.js"></script>
-    <script src="/javascript/sketches/steady-nerves/steady-nerves.js"></script>
     <script src="/javascript/artModal.js"></script>
   </body>
 </html>
