@@ -1,37 +1,13 @@
-console.time("script-parse");
-console.log("Script parsing started");
-
-// Override p5.js DOM waiting - force immediate start
-if (typeof window !== "undefined") {
-  console.log("Forcing p5.js to start immediately...");
-
-  // p5.js normally waits for window 'load' event
-  // We'll trigger it manually as soon as this script loads
-  if (document.readyState !== "complete") {
-    // Force the window load event to fire early
-    window.dispatchEvent(new Event("load"));
-    console.log("Dispatched early load event");
-  }
-}
-
 let boundingBox, corrois, m, n, sand, sandColor;
 let numberOfSandGrains;
 let navHeight = 65;
 
 function setup() {
-  console.timeEnd("script-parse");
-  console.time("p5-setup");
-  console.log("p5 setup started");
-
   const canvas = createCanvas(windowWidth, windowHeight - navHeight);
-  console.log("Canvas created");
-
   canvas.parent("home");
-  console.log("Canvas attached to DOM");
 
   // If the path does not include "steady-nerves", then we are on the homepage
   // version of the artwork, and so must anchor the canvas to the DOM element with the "home" ID
-
   if (!window.location.pathname.includes("steady-nerves")) {
     canvas.parent("home");
   }
@@ -42,9 +18,6 @@ function setup() {
   newVibration();
   cursor(HAND);
   loadPixels();
-
-  console.timeEnd("p5-setup");
-  console.log("Setup complete");
 }
 
 function newVibration() {
