@@ -4,7 +4,6 @@ let navHeight = 65;
 
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight - navHeight);
-  canvas.parent("home");
 
   // If the path does not include "steady-nerves", then we are on the homepage
   // version of the artwork, and so must anchor the canvas to the DOM element with the "home" ID
