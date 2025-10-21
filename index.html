@@ -30,48 +30,7 @@
     </script>
   </head>
   <body>
-    <nav
-      id="desktop-nav"
-      class="border-sand h-nav-h top-0 z-1 hidden w-full items-center justify-between border-b bg-black px-10 py-0 font-medium tracking-widest md:sticky md:flex"
-    >
-      <ul
-        class="nav-links flex w-full list-none justify-between gap-10 text-xl lg:justify-end lg:text-2xl"
-      >
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#dev-experience">dev experience</a></li>
-        <li><a href="#generative-art">generative art</a></li>
-      </ul>
-    </nav>
-    <nav
-      id="hamburger-nav"
-      class="border-sand h-nav-h sticky top-0 z-1 flex w-full items-center justify-end border-b-[1.5px] bg-black px-[30px] md:hidden"
-    >
-      <div class="hamburger-menu relative inline-block">
-        <div
-          class="hamburger-icon flex h-[24px] w-[30px] cursor-pointer flex-col justify-between"
-          onclick="toggleMenu()"
-        >
-          <span class="bg-sand h-[2px] w-full duration-300 ease-in-out"></span>
-          <span class="bg-sand h-[2px] w-full duration-300 ease-in-out"></span>
-          <span class="bg-sand h-[2px] w-full duration-300 ease-in-out"></span>
-        </div>
-        <div
-          class="menu-links absolute top-[100%] right-0 max-h-0 w-fit overflow-hidden text-center text-xl duration-300 ease-in-out"
-        >
-          <li class="h-10"><a href="#home" onclick="toggleMenu()">home</a></li>
-          <li class="h-10">
-            <a href="#about" onclick="toggleMenu()">about</a>
-          </li>
-          <li class="h-10">
-            <a href="#dev-experience" onclick="toggleMenu()">dev experience</a>
-          </li>
-          <li class="h-10">
-            <a href="#generative-art" onclick="toggleMenu()">generative art</a>
-          </li>
-        </div>
-      </div>
-    </nav>
+    <div id="nav-container"></div>
     <div id="home" class="border-sand min-h-[calc(100vh-65px)] border-b">
       <div
         id="text-overlay"
@@ -598,6 +557,7 @@
       <p>Copyright &#169; 2025 Wendy Dherin. All rights reserved.</p>
     </footer>
 
+    <script type="module" src="/src/main.jsx"></script>
     <script src="/libraries/p5.min.js"></script>
     <script src="/javascript/sketches/steady-nerves/sand-grain.js"></script>
     <script src="/javascript/sketches/steady-nerves/steady-nerves.js"></script>

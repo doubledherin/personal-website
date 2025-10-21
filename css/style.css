@@ -69,40 +69,6 @@ a,
   transition: all 300s ease;
 }
 
-.menu-links.open {
-  max-height: max-content;
-  overflow: visible;
-  background-color: black;
-  width: 200px;
-  top: 200%;
-  right: -30px;
-  list-style: none;
-}
-
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:nth-child(2) {
-  opacity: 1;
-}
-
-.hamburger-icon span:last-child {
-  transform: none;
-}
-
 #name-overlay {
   background-color: rgba(0, 0, 0, 0.87);
   color: var(--sand);
