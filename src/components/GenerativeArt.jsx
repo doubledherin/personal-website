@@ -1,3 +1,17 @@
+import nervureVideo from "/assets/nervure.mp4";
+import steadyNervesVideo from "/assets/steady-nerves.mp4";
+import ripplingSpots from "/assets/rippling-spots.mp4";
+import doubtVideo from "/assets/doubt.mp4";
+import mandalaEffectVideo from "/assets/mandala-effect.mp4";
+import noiseFlowerImg from "/assets/noise-flower.png";
+import peterImg from "/assets/peter.png";
+import insecurityImg from "/assets/insecurity.png";
+import nervureGif from "/assets/originals/nervure.gif";
+import steadyNervesGif from "/assets/originals/steady-nerves.gif";
+import mandalaEffectGif from "/assets/originals/mandala-effect.gif";
+import ripplingSpotsGif from "/assets/originals/rippling-spots.gif";
+import doubtGif from "/assets/originals/doubt.gif";
+
 export default function GenerativeArt({ onArtClick }) {
   return (
     <section id="generative-art" className="scroll-mt-[65px]">
@@ -39,9 +53,9 @@ export default function GenerativeArt({ onArtClick }) {
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
             >
-              <source src="assets/nervure.mp4" type="video/mp4" />
+              <source src={nervureVideo} type="video/mp4" />
               <img
-                src="assets/originals/nervure.gif"
+                src={nervureGif}
                 alt="Nervure generative art"
                 loading="lazy"
                 className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
@@ -76,9 +90,9 @@ export default function GenerativeArt({ onArtClick }) {
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
             >
-              <source src="assets/steady-nerves.mp4" type="video/mp4" />
+              <source src={steadyNervesVideo} type="video/mp4" />
               <img
-                src="assets/originals/steady-nerves.gif"
+                src={steadyNervesGif}
                 alt="Steady Nerves generative art"
                 loading="lazy"
                 className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
@@ -112,9 +126,9 @@ export default function GenerativeArt({ onArtClick }) {
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
             >
-              <source src="assets/mandala-effect.mp4" type="video/mp4" />
+              <source src={mandalaEffectVideo} type="video/mp4" />
               <img
-                src="assets/originals/mandala-effect.gif"
+                src={mandalaEffectGif}
                 alt="Mandala Effect generative art"
                 loading="lazy"
                 className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
@@ -141,7 +155,7 @@ export default function GenerativeArt({ onArtClick }) {
         >
           <div className="relative h-[300px] w-full">
             <img
-              src="assets/noise-flower.png"
+              src={noiseFlowerImg}
               alt="Noise Flower generative art"
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
@@ -176,9 +190,9 @@ export default function GenerativeArt({ onArtClick }) {
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
             >
-              <source src="assets/rippling-spots.mp4" type="video/mp4" />
+              <source src={ripplingSpots} type="video/mp4" />
               <img
-                src="assets/originals/rippling-spots.gif"
+                src={ripplingSpotsGif}
                 alt="Rippling Spots generative art"
                 loading="lazy"
                 className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
@@ -207,7 +221,7 @@ export default function GenerativeArt({ onArtClick }) {
         >
           <div className="relative h-[300px] w-full">
             <img
-              src="assets/peter.png"
+              src={peterImg}
               alt="Peter generative art"
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
@@ -233,7 +247,7 @@ export default function GenerativeArt({ onArtClick }) {
         >
           <div className="relative h-[300px] w-full">
             <img
-              src="assets/insecurity.png"
+              src={insecurityImg}
               alt="Insecurity generative art"
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
@@ -266,9 +280,9 @@ export default function GenerativeArt({ onArtClick }) {
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
             >
-              <source src="assets/doubt.mp4" type="video/mp4" />
+              <source src={doubtVideo} type="video/mp4" />
               <img
-                src="assets/originals/doubt.gif"
+                src={doubtGif}
                 alt="Doubt generative art"
                 loading="lazy"
                 className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
