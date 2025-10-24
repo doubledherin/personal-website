@@ -7,7 +7,6 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Move ALL preload hints to the top -->
     <link rel="preload" href="/libraries/p5.min.js" as="script" />
     <link
       rel="preload"
@@ -20,7 +19,6 @@
       as="script"
     />
     <link rel="preload" href="/javascript/scrollToAnchor.js" as="script" />
-    <link rel="preload" href="/javascript/toggleMenu.js" as="script" />
     <link rel="preload" href="/javascript/artModal.js" as="script" />
 
     <script>
@@ -31,30 +29,7 @@
   </head>
   <body>
     <div id="nav-container"></div>
-    <div id="home" class="border-sand min-h-[calc(100vh-65px)] border-b">
-      <div
-        id="text-overlay"
-        class="absolute top-2/3 left-1/2 w-[calc(100%-40px)] -translate-x-1/2 -translate-y-2/3 transform py-4 lg:left-1/2 lg:w-fit lg:translate-x-0 lg:text-left"
-      >
-        <div
-          id="name-overlay"
-          class="font-didot w-fit rounded-2xl px-2 pt-2 pb-3 text-5xl font-extralight tracking-wide md:text-7xl"
-        >
-          Wendy Dherin
-        </div>
-        <div class="flex flex-col text-2xl font-extralight md:text-4xl">
-          <div id="dev-overlay" class="w-fit rounded-2xl px-2 py-1 text-white">
-            full-stack developer.
-          </div>
-          <div
-            id="generative-artist-overlay"
-            class="w-fit rounded-2xl px-2 py-1 text-white"
-          >
-            generative artist.
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="home" class="border-sand min-h-[calc(100vh-65px)] border-b"></div>
     <div id="section_container" class="px-6 md:px-10 lg:px-14">
       <section
         id="about"
@@ -562,7 +537,6 @@
     <script src="/javascript/sketches/steady-nerves/sand-grain.js"></script>
     <script src="/javascript/sketches/steady-nerves/steady-nerves.js"></script>
     <script src="/javascript/scrollToAnchor.js"></script>
-    <script src="/javascript/toggleMenu.js"></script>
     <script src="/javascript/artModal.js"></script>
   </body>
 </html>
