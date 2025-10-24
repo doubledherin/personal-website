@@ -1,4 +1,4 @@
-export default function GenerativeArt() {
+export default function GenerativeArt({ onArtClick }) {
   return (
     <section id="generative-art" className="scroll-mt-[65px]">
       <p className="text-md pb-2 text-center">Browse my recent</p>
@@ -28,14 +28,14 @@ export default function GenerativeArt() {
         {/* Nervure */}
         <div
           className="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black transition-transform duration-300 hover:scale-105"
-          onclick="openArtModal('nervure')"
+          onClick={() => onArtClick("nervure")}
         >
           <div className="relative h-[300px] w-full">
             <video
-              autoplay
+              autoPlay
               muted
               loop
-              playsinline
+              playsInline
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
             >
@@ -65,14 +65,14 @@ export default function GenerativeArt() {
         {/* Steady Nerves */}
         <div
           className="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black transition-transform duration-300 hover:scale-105"
-          onclick="openArtModal('steady-nerves')"
+          onClick={() => openArtModal("steady-nerves")}
         >
           <div className="relative h-[300px] w-full">
             <video
-              autoplay
+              autoPlay
               muted
               loop
-              playsinline
+              playsInline
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
             >
@@ -101,14 +101,14 @@ export default function GenerativeArt() {
         {/* Mandala Effect */}
         <div
           className="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black transition-transform duration-300 hover:scale-105"
-          onclick="openArtModal('mandala-effect')"
+          onClick={() => openArtModal("mandala-effect")}
         >
           <div className="relative h-[300px] w-full">
             <video
-              autoplay
+              autoPlay
               muted
               loop
-              playsinline
+              playsInline
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
             >
@@ -137,7 +137,7 @@ export default function GenerativeArt() {
         {/* Noise Flower */}
         <div
           className="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black transition-transform duration-300 hover:scale-105"
-          onclick="openArtModal('noise-flower')"
+          onClick={() => openArtModal("noise-flower")}
         >
           <div className="relative h-[300px] w-full">
             <img
@@ -165,14 +165,14 @@ export default function GenerativeArt() {
         {/* Rippling Spots */}
         <div
           className="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black transition-transform duration-300 hover:scale-105"
-          onclick="openArtModal('rippling-spots')"
+          onClick={() => openArtModal("rippling-spots")}
         >
           <div className="relative h-[300px] w-full">
             <video
-              autoplay
+              autoPlay
               muted
               loop
-              playsinline
+              playsInline
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
             >
@@ -203,7 +203,7 @@ export default function GenerativeArt() {
         {/* Peter */}
         <div
           className="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black transition-transform duration-300 hover:scale-105"
-          onclick="openArtModal('peter')"
+          onClick={() => openArtModal("peter")}
         >
           <div className="relative h-[300px] w-full">
             <img
@@ -229,7 +229,7 @@ export default function GenerativeArt() {
         {/* Insecurity */}
         <div
           className="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black transition-transform duration-300 hover:scale-105"
-          onclick="openArtModal('insecurity')"
+          onClick={() => openArtModal("insecurity")}
         >
           <div className="relative h-[300px] w-full">
             <img
@@ -255,14 +255,14 @@ export default function GenerativeArt() {
         {/* Doubt */}
         <div
           className="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black transition-transform duration-300 hover:scale-105"
-          onclick="openArtModal('doubt')"
+          onClick={() => openArtModal("doubt")}
         >
           <div className="relative h-[300px] w-full">
             <video
-              autoplay
+              autoPlay
               muted
               loop
-              playsinline
+              playsInline
               loading="lazy"
               className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
             >
