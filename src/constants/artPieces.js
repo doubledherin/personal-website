@@ -71,4 +71,12 @@ export const artPieces = [
     codeUrl:
       "https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/doubt.js",
   },
+  {
+    id: "newest",
+    title: '"Newest"',
+    inspiration: "A vision I had once, represented in code",
+    url: "newest.html",
+    codeUrl:
+      "https://github.com/doubledherin/personal-website/blob/main/public/javascript/sketches/newest.js",
+  },
 ];

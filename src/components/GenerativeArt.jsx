@@ -11,6 +11,7 @@ import steadyNervesGif from "/assets/originals/steady-nerves.gif";
 import mandalaEffectGif from "/assets/originals/mandala-effect.gif";
 import ripplingSpotsGif from "/assets/originals/rippling-spots.gif";
 import doubtGif from "/assets/originals/doubt.gif";
+import newestImg from "/assets/newest.png";
 
 export default function GenerativeArt({ onArtClick }) {
   return (
@@ -293,6 +294,32 @@ export default function GenerativeArt({ onArtClick }) {
               <div className="text-xl font-medium text-white">"Doubt"</div>
               <div className="mt-1 text-sm text-gray-300">
                 Typography animation
+              </div>
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-all duration-300 group-hover:opacity-100">
+              <button className="bg-sand hover:bg-sand/90 rounded-lg px-6 py-2 font-medium text-black transition-colors">
+                View Live
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* Newest */}
+        <div
+          className="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black transition-transform duration-300 hover:scale-105"
+          onClick={() => onArtClick("newest")}
+        >
+          <div className="relative h-[300px] w-full">
+            <img
+              src={newestImg}
+              alt="Newest generative art"
+              loading="lazy"
+              className="h-full w-full object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-100"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div className="absolute bottom-4 left-4">
+              <div className="text-xl font-medium text-white">"Newest"</div>
+              <div className="mt-1 text-sm text-gray-300">
+                A vision I had once
               </div>
             </div>
             <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-all duration-300 group-hover:opacity-100">
