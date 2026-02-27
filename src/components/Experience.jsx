@@ -1,6 +1,6 @@
 export default function Experience() {
   return (
-    <section id="dev-experience" className="scroll-mt-[65px]">
+    <section id="dev-experience" className="scroll-mt-[65px] px-10">
       <p className="text-md pb-2 text-center lg:text-2xl">Check out my</p>
       <div className="pb-7 text-center text-4xl lg:text-5xl">
         Dev Experience

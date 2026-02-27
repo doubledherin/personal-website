@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex min-h-[calc(100vh-65px)] scroll-mt-[65px] flex-col justify-center pt-0"
+      className="flex min-h-[calc(100vh-65px)] scroll-mt-[65px] flex-col justify-center px-10 pt-0"
     >
       <p className="text-md pb-2 text-center lg:text-2xl">A little something</p>
       <div className="pb-7 text-center text-4xl lg:text-5xl">About Me</div>

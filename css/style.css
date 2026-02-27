@@ -45,7 +45,7 @@
     @apply flex min-h-[calc(100vh-65px)] scroll-mt-[65px] flex-col justify-center pt-0;
   }
   p {
-    @apply pb-2 font-light md:text-lg lg:text-2xl 2xl:pb-4 2xl:text-3xl;
+    @apply pb-2 font-light md:text-lg lg:text-xl 2xl:pb-4;
   }
 }
 

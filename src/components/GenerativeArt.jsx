@@ -14,29 +14,31 @@ import doubtGif from "/assets/originals/doubt.gif";
 
 export default function GenerativeArt({ onArtClick }) {
   return (
-    <section id="generative-art" className="scroll-mt-[65px]">
-      <p className="text-md pb-2 text-center">Browse my recent</p>
-      <div className="pb-7 text-center text-4xl">Generative Art</div>
-      <div className="pb-7 text-xl">
+    <section id="generative-art" className="scroll-mt-[65px] px-10">
+      <p className="text-md pb-2 text-center lg:text-2xl">Browse my recent</p>
+      <div className="pb-7 text-center text-4xl lg:text-5xl">
+        Generative Art
+      </div>
+      <p>
         Some of these works were inspired by tutorials from artists who have
         been important inpirations to me along my learning path as a generative
         artist.
-      </div>
-      <div className="pb-7 text-xl">
+      </p>
+      <p>
         In particular, "Steady Nerves" is a spinoff of a Patt Vira tutorial on
         Chladni patterns, and was commissioned by the band Chaos Fiction to
         promote the release of their new album. "Mandala Effect" is a spinoff of
         a tutorial released by The Dot Is Black. "Rippling Spots" is from a
         tutorial by Etienne Jacobs, and "Doubt" is inspired by a Patt Vira
         tutorial on using the OpenType library with p5.js.
-      </div>
-      <div className="pb-7 text-xl">
+      </p>
+      <p>
         Other works are purely original. I've learned the most from Dan Shiffman
         — both from his Coding Train videos and his
         <i>Nature of Code</i>
         book — and from Patt Vira's videos, and I'm so grateful for their
         generous teachings.
-      </div>
+      </p>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {/* Nervure */}
