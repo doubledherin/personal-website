@@ -19,28 +19,30 @@ export default function GenerativeArt({ onArtClick }) {
       <div className="pb-7 text-center text-4xl lg:text-5xl">
         Generative Art
       </div>
-      <p>
-        Some of these works were inspired by tutorials from artists who have
-        been important inpirations to me along my learning path as a generative
-        artist.
-      </p>
-      <p>
-        In particular, "Steady Nerves" is a spinoff of a Patt Vira tutorial on
-        Chladni patterns, and was commissioned by the band Chaos Fiction to
-        promote the release of their new album. "Mandala Effect" is a spinoff of
-        a tutorial released by The Dot Is Black. "Rippling Spots" is from a
-        tutorial by Etienne Jacobs, and "Doubt" is inspired by a Patt Vira
-        tutorial on using the OpenType library with p5.js.
-      </p>
-      <p>
-        Other works are purely original. I've learned the most from Dan Shiffman
-        — both from his Coding Train videos and his
-        <i>Nature of Code</i>
-        book — and from Patt Vira's videos, and I'm so grateful for their
-        generous teachings.
-      </p>
+      <div className="mx-auto flex max-w-3xl flex-col items-center">
+        <p>
+          Some of these works were inspired by tutorials from artists who have
+          been important inpirations to me along my learning path as a
+          generative artist.
+        </p>
+        <p>
+          In particular, "Steady Nerves" is a spinoff of a Patt Vira tutorial on
+          Chladni patterns, and was commissioned by the band Chaos Fiction to
+          promote the release of their new album. "Mandala Effect" is a spinoff
+          of a tutorial released by The Dot Is Black. "Rippling Spots" is from a
+          tutorial by Etienne Jacobs, and "Doubt" is inspired by a Patt Vira
+          tutorial on using the OpenType library with p5.js.
+        </p>
+        <p>
+          Other works are purely original. I've learned the most from Dan
+          Shiffman — both from his Coding Train videos and his
+          <i>Nature of Code</i>
+          book — and from Patt Vira's videos, and I'm so grateful for their
+          generous teachings.
+        </p>
+      </div>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 py-4 md:grid-cols-2 lg:grid-cols-3">
         {/* Nervure */}
         <div
           className="group relative cursor-pointer overflow-hidden rounded-2xl border border-white bg-black transition-transform duration-300 hover:scale-105"
