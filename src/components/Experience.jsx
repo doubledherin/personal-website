@@ -6,7 +6,7 @@ export default function Experience() {
         Dev Experience
       </div>
       <div className="mb-6 flex justify-center">
-        <a href="./assets/wendydherin.pdf" download="wendy_dherin_resume">
+        <a href="./assets/wendydherin.pdf" download="wendy_dherin_resume.pdf">
           <button className="bg-sand hover:text-sand hov mr-10 w-[160px] cursor-pointer rounded-full px-6 py-1 text-black hover:border hover:bg-black">
             Resume
           </button>
